@@ -1,0 +1,10 @@
+<aside id="sidebar" class="card shadow">
+	{% if include.pinned-posts %}{% include articles/pinned-posts.html count=layout.pinned-posts %}{% endif %}
+	{% if page.ads %}{% for ad in page.ads %}
+		{% include common/ad.html ad=ad content="sidebar" %}
+	{% endfor %}{% endif %}
+	{% for ad in site.data.ads.sidebar %}
+		{% include common/ad.html ad=ad content="sidebar" %}
+	{% endfor %}
+	{% if include.recent-posts %}{% include articles/recent-posts.html count=layout.recent-posts %}{% endif %}
+</aside>

@@ -1,0 +1,17 @@
+<leaflet-map center="{{ include.geo.latitude }},{{ include.geo.longitude }}" zoom="{{ include.zoom | default: '13' }}" minzoom="{{ include.minzoom | default: 13 }}" maxzoom="{{ include.maxzoom | default: 15 }}" crossorigin="annonymous" loading="{{ include.loading | default: 'eager' }}" zoomcontrol="" detectretina="" aria-hidden="true"{% if include.hidden %} hidden=""{% endif %}>
+	<leaflet-marker latitude="{{ include.geo.latitude }}" longitude="{{ include.geo.longitude }}" open="">
+		{% if include.geo.url %}
+			<a href="{{ include.geo.url }}" rel="noopener external" slot="popup">
+				{% include common/icon.html icon="link-external" height="16" width="16" %}
+				<div>{{ include.geo.name }}</div>
+				{% if include.content %}{{ include.content }}{% endif %}
+			</a>
+		{% else %}
+			<div slot="popup">
+				<div>{{ include.geo.name }}</div>
+				{% if include.content %}{{ include.content }}{% endif %}
+			</div>
+		{% endif %}
+		<img slot="icon" src="{{ include.icon | default: '/img/adwaita-icons/actions/mark-location.svg' }}" width="32" height="32" decoding="async" loading="lazy" />
+	</leaflet-marker>
+</leaflet-map>

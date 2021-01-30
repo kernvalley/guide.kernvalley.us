@@ -1,0 +1,131 @@
+---
+author: Chris Zuber
+title: Jekyll Template Demo
+url: 'https://infallible-galileo-ac41ee.netlify.app'
+markdown: kramdown
+version: 1.0.0
+timezone: America/Los_Angeles
+lang: en
+dir: ltr
+charset: utf-8
+paginate: 8
+paginate_path: "/page-:num/"
+viewport: "width=device-width, viewport-fit=cover"
+robots: 'follow, index'
+referrer: no-referrer
+manifest: /manifest.json
+tiles-config: /browserconfig.xml
+service_worker: /service-worker.js
+og-type: website
+keep-kern-clean: true
+description: "A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts, etc."
+mobile-web-app-capable: true
+canonical: https://infallible-galileo-ac41ee.netlify.app/''
+keywords:
+  - jekyll
+  - static
+  - template
+  - github
+  - CSS3
+  - HTML5
+  - responsive design
+  - progressive web app
+  - pwa
+  - ecmascript
+  - javascript
+  - es6
+repository:
+  username: shgysk8zer0
+  project: jekyll-template
+  title: Jekyll Template
+twitter: "shgysk8zer0"
+feed:
+  url: /feed.rss
+  type: application/rss+xml
+icons: /img/icons.svg
+# discus-identifier:
+# google-analytics:
+# ad-sense:
+# webmaster-verifications:
+#   google:
+#   bing:
+defaults:
+  - scope:
+      path: _posts
+    values:
+      layout: post
+      author:
+        givenName: Chris
+        familyName: Zuber
+        url: 'https://shgysk8zer0.github.io'
+        gravatar: '43578597e449298f5488c2407c8a8ae5'
+        github: shgysk8zer0
+        twitter: shgysk8zer0
+        linkedin: chris-zuber-455346141/
+      publisher:
+        name: 'KernValley.US'
+        url: 'https://kernvalley.us'
+        logo:
+          url: 'https://kernvalley.us/img/icon-256.png'
+      permalink: /posts/:categories/:year/:month/:day/:title/
+      comments: true
+      ads: false
+      index: true
+  - scope:
+      path: _drafts
+    values:
+      layout: post
+      author:
+        givenName: Chris
+        familyName: Zuber
+        url: 'https://shgysk8zer0.github.io'
+        gravatar: '43578597e449298f5488c2407c8a8ae5'
+        github: 'shgysk8zer0'
+        twitter: shgysk8zer0
+      publisher:
+        name: 'KernValley.US'
+        url: 'https://kernvalley.us'
+        logo:
+          url: 'https://kernvalley.us/img/icon-256.png'
+      permalink: /posts/:categories/:year/:month/:day/:title/
+      comments: false
+      ads: false
+plugins:
+  - jekyll-gist
+  - jekyll-youtube
+  - jekyll-admin
+  - jekyll-watch
+  - jekyll-paginate
+include:
+# Folders with dotfiles are ignored by default.
+  - .well-known
+  - _headers
+  - _redirects
+exclude:
+  - ".gitkeep"
+  - "*.rb"
+  - "*.gemspec"
+  - "*.php"
+  - "*.sh"
+  - "*.csv"
+  - "*.sfd"
+  - "*.ai"
+  - "*.psd"
+  - "*.sketch"
+  - "*.yml"
+  - "*.lock"
+  - "*.log"
+  - "*.config.js"
+  - ".gitkeep"
+  - docs/
+  - "/.github/"
+  - Gemfile
+  - node_modules/
+  - palette.xml
+  - README.md
+  - LICENSE
+  - "/img/octicons/*.md"
+  - "/img/octicons/LICENSE"
+  - "/img/octicons/script"
+  - "/img/adwaita-icons/docs"
+  - "/img/adwaita-icons/LICENSE"
