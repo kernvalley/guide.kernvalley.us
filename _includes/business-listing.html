@@ -1,0 +1,18 @@
+<div id="{{ include.place.identifier }}" class="card business-listing" title="{{ include.place.name | escape }}" itemtype="https://schema.org/{{ include.place['@type'] | default: 'Place' }}" itemscope="">
+	<h3 itemprop="name" class="center">{{ include.place.name }}</h3>
+	{% if include.place.image %}{%for img in include.place.image %}
+		<img itemprop="image" src="{{ img.url }}" height="{{ img.height }}" width="{{ img.width }}" loading="lazy" decoding="async" crossorigin="anonymous" referrerpolicy="no-referrer" alt="{{ img.name }}" /><br />
+	{% endfor %}{% endif %}
+	{% if include.place.description %}<blockquote itemprop="description">{{ include.place.description }}</blockquote>{% endif %}
+	{% if include.place.telephone %}{% include common/telephone.html telephone=include.place.telephone %}<br />{% endif %}
+	{% if include.place.url %}{% include common/url.html url=include.place.url %}{% endif %}
+	{% if include.place.email %}{% include common/email.html telephone=include.place.email %}<br />{% endif %}
+	{% if include.place.address %}{% include common/address.html address=include.place.address %}<br />{% endif %}
+	<div>
+		<button type="button" class="btn btn-outline" data-show-modal="#{{ include.place.identifier }}-map">Show Map</button>
+	</div>
+	<dialog id="{{ include.place.identifier }}-map">
+		<iframe src="https://maps.kernvalley.us/embed?latitude={{ include.place.geo.latitude }}&amp;longitude={{ include.place.geo.longitude }}&amp;popup={{ include.place.name | url_encode }}" width="400" height="400" name="krvMaps" loading="lazy" sandbox="allow-scripts"></iframe>
+		<button type="button" class="btn btn-outline" title="Close" data-close="#{{ include.place.identifier }}-map">{% include common/icon.html icon="x" height="20" width="20" fill="currentColor" %}</button>
+	</dialog>
+</div>

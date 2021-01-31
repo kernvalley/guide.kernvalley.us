@@ -10,3 +10,9 @@ article p:first-letter {
 .meta-author-links.flex {
 	gap: 12px;
 }
+
+.grid.directory {
+	grid-template-columns: repeat(auto-fill, minmax(350px, 400px));
+	gap: 8px;
+	justify-content: space-evenly;
+}

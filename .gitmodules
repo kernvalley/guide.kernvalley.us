@@ -13,3 +13,6 @@
 [submodule "_includes/articles"]
 	path = _includes/articles
 	url = https://github.com/shgysk8zer0/jekyll-articles.git
+[submodule "_data/places"]
+	path = _data/places
+	url = https://github.com/kernvalley/places.git
