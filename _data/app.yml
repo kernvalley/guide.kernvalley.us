@@ -8,7 +8,7 @@ orientation: any
 description: A directory of local businesses in the Kern River Valley
 icons-file: /img/icons.svg
 theme:
-  color: '#007bff'
+  color: '#008000'
   background: '#242424'
 icons:
   - src: /img/favicon.svg
@@ -47,7 +47,37 @@ screenshots:
     sizes: 160x78
     type: image/png
 # https://web.dev/app-shortcuts/
-shortcuts: []
+shortcuts:
+  - name: Dining
+    url: /dining
+    description: Dining Page on KRV Guide
+    icons:
+      - src: /img/shortcuts/restuarant-192.png
+        type: image/png
+        sizes: 192x192
+      - src: /img/shortcuts/restuarant-32.png
+        type: image/png
+        sizes: 32x32
+  - name: Stores
+    url: /stores
+    description: Grocery and other Stores Page on KRV Guide
+    icons:
+      - src: /img/shortcuts/shopping-192.png
+        type: image/png
+        sizes: 192x192
+      - src: /img/shortcuts/shopping-32.png
+        type: image/png
+        sizes: 32x32
+  - name: Other
+    url: /other
+    description: Misc. listings Page on KRV Guide
+    icons:
+      - src: /img/shortcuts/business-192.png
+        type: image/png
+        sizes: 192x192
+      - src: /img/shortcuts/business-32.png
+        type: image/png
+        sizes: 32x32
 # iarc_rating_id: e84b072d-71b3-4d3e-86ae-31a8ce4e53b7
 related_applications:
   - platform: webapp

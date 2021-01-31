@@ -4,6 +4,7 @@ layout: default
 theme: default
 data-layout: default
 ---
+{% include common/share-buttons.html facebook=true twitter=true linkedin=true %}
 {% if page.category %}
 	{% assign places = site.data.places[page.category] | sort: "name" %}
 	<section class="directory grid">

@@ -2,6 +2,6 @@
   "relation": ["delegate_permission/common.query_webapk"],
   "target": {
     "namespace": "web",
-    "site": "/manifest.json"
+    "site": "https://guide.kernvalley.us/manifest.json"
   }
 }]
