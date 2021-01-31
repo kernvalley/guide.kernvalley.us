@@ -1,5 +1,5 @@
-# Kern Valley Guide
-A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts, etc.
+# [Kern Valley Guide](https://guide.kernvalley.us)
+A directory of local businesses in the Kern River Valley
 
 <!-- [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=kernvalley/guide.kernvalley.us)](https://dependabot.com) -->
 [![Node CI](https://github.com/kernvalley/guide.kernvalley.us/workflows/Node%20CI/badge.svg)](https://github.com/kernvalley/guide.kernvalley.us/actions)

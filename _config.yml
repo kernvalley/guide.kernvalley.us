@@ -1,7 +1,7 @@
 ---
 author: Chris Zuber
 title: Kern Valley Business Guide
-url: 'https://infallible-galileo-ac41ee.netlify.app'
+url: https://guide.kernvalley.us
 markdown: kramdown
 version: 1.0.0
 timezone: America/Los_Angeles
@@ -18,7 +18,7 @@ og-type: website
 keep-kern-clean: true
 description: A directory of local businesses in the Kern River Valley
 mobile-web-app-capable: true
-canonical: https://infallible-galileo-ac41ee.netlify.app/
+canonical: https://guide.kernvalley.us
 keywords:
   - directory
   - guide
