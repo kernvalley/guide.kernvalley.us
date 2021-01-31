@@ -2,6 +2,16 @@ nav:
   - label: Home
     icon: home
     href: /
+  - label: Dining
+    href: /dining/
+  - label: Motels
+    href: /motels/
+  - label: Stores
+    href: /stores/
+  - label: Civic
+    href: /civic/
+  - label: Other
+    href: /other/
 footer:
   - label: KernValley.US
     href: https://kernvalley.us

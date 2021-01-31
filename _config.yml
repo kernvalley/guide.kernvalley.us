@@ -1,15 +1,13 @@
 ---
 author: Chris Zuber
-title: Jekyll Template Demo
-url: 'https://infallible-galileo-ac41ee.netlify.app'
+title: Kern Valley Business Guide
+url: https://guide.kernvalley.us
 markdown: kramdown
 version: 1.0.0
 timezone: America/Los_Angeles
 lang: en
 dir: ltr
 charset: utf-8
-paginate: 8
-paginate_path: "/page-:num/"
 viewport: "width=device-width, viewport-fit=cover"
 robots: 'follow, index'
 referrer: no-referrer
@@ -18,30 +16,23 @@ tiles-config: /browserconfig.xml
 service_worker: /service-worker.js
 og-type: website
 keep-kern-clean: true
-description: "A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts, etc."
+description: A directory of local businesses in the Kern River Valley
 mobile-web-app-capable: true
-canonical: https://infallible-galileo-ac41ee.netlify.app/''
+canonical: https://guide.kernvalley.us
 keywords:
-  - jekyll
-  - static
-  - template
-  - github
-  - CSS3
-  - HTML5
-  - responsive design
-  - progressive web app
-  - pwa
-  - ecmascript
-  - javascript
-  - es6
+  - directory
+  - guide
+  - businesses
+  - kern valley
+  - kern river valley
 repository:
-  username: shgysk8zer0
-  project: jekyll-template
-  title: Jekyll Template
-twitter: "shgysk8zer0"
-feed:
-  url: /feed.rss
-  type: application/rss+xml
+  username: kernvalley
+  project: guide.kernvalley.us
+  title: Kern Valley Guide
+twitter: kern_valley
+# feed:
+#   url: /feed.rss
+#   type: application/rss+xml
 icons: /img/icons.svg
 # discus-identifier:
 # google-analytics:

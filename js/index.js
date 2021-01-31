@@ -3,10 +3,8 @@ import 'https://cdn.kernvalley.us/js/std-js/shims.js';
 import 'https://cdn.kernvalley.us/js/std-js/theme-cookie.js';
 import 'https://cdn.kernvalley.us/components/share-button.js';
 import 'https://cdn.kernvalley.us/components/share-to-button/share-to-button.js';
-import 'https://cdn.kernvalley.us/components/slide-show/slide-show.js';
 import 'https://cdn.kernvalley.us/components/github/user.js';
 import 'https://cdn.kernvalley.us/components/current-year.js';
-import 'https://cdn.kernvalley.us/components/bacon-ipsum.js';
 import 'https://cdn.kernvalley.us/components/pwa/install.js';
 import 'https://cdn.kernvalley.us/components/ad/block.js';
 import 'https://cdn.kernvalley.us/components/app/list-button.js';
@@ -14,7 +12,6 @@ import 'https://cdn.kernvalley.us/components/app/stores.js';
 import { $, ready } from 'https://cdn.kernvalley.us/js/std-js/functions.js';
 import { init } from 'https://cdn.kernvalley.us/js/std-js/data-handlers.js';
 import { importGa, externalHandler, telHandler, mailtoHandler } from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
-import { submitHandler } from './contact-demo.js';
 import { GA } from './consts.js';
 
 $(':root').css({'--viewport-height': `${window.innerHeight}px`});
@@ -61,7 +58,83 @@ Promise.allSettled([
 ]).then(() => {
 	init().catch(console.error);
 
-	if (location.pathname.startsWith('/contact')) {
-		$('#contact-form').submit(submitHandler);
+	$('#searchForm').on({
+		submit: event => {
+			event.preventDefault();
+			const data = new FormData(event.target);
+			const name = data.get('name').toLowerCase();
+
+			if (Element.prototype.animate instanceof Function) {
+				$('#main .business-listing[title]').each(el => {
+					const matches = el.title.toLowerCase().includes(name);
+					if (matches && el.hidden) {
+						el.animate([{
+							transform: 'scale(0.1)',
+							opacity: 0,
+						}, {
+							transform: 'none',
+							opacity: 1
+						}], {
+							duration: 400,
+							easing: 'ease-in-out',
+							fill: 'forwards',
+						});
+
+						el.hidden = false;
+					} else if (! matches && ! el.hidden) {
+						el.animate([{
+							transform: 'none',
+							opacity: 1
+						}, {
+							transform: 'scale(0.1)',
+							opacity: 0,
+						}], {
+							duration: 400,
+							easing: 'ease-in-out',
+							fill: 'forwards',
+						}).finished.then(() => el.hidden = true);
+					}
+				});
+			} else {
+				$('#main .business-listing[title]').each(el => {
+					el.hidden = ! el.title.toLowerCase().includes(name);
+				});
+			}
+			console.info(data.get('name'));
+		},
+		reset: () => {
+			if (Element.prototype.animate instanceof Function) {
+				$('#main .business-listing[hidden]').each(el => {
+					el.animate([{
+						transform: 'scale(0.1)',
+						opacity: 0,
+					}, {
+						transform: 'none',
+						opacity: 1
+					}], {
+						duration: 400,
+						easing: 'ease-in-out',
+						fill: 'forwards',
+					});
+
+					el.hidden = false;
+				});
+			} else {
+				$('#main .business-listing').unhide();
+			}
+		}
+	});
+
+	const datalist = document.getElementById('business-list');
+
+	if (datalist instanceof HTMLElement) {
+		const businesses = Array.from(document.querySelectorAll('.business-listing[title]'));
+		const names = Array.from(new Set(businesses.map(({ title }) => title)));
+		const opts = names.map(name => {
+			const opt = document.createElement('option');
+			opt.value = name;
+			return opt;
+		});
+		datalist.append(...opts);
 	}
 });

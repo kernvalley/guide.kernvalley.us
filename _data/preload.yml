@@ -1,19 +1,19 @@
-- href: "https://cdn.kernvalley.us/components/github/user.html"
+- href: https://cdn.kernvalley.us/components/github/user.html
   as: fetch
   type: text/html
   crossOrigin: anonymous
   referrerPolicy: no-referrer
-- href: "https://cdn.kernvalley.us/components/github/user.css"
+- href: https://cdn.kernvalley.us/components/github/user.css
   as: style
   type: text/css
   crossOrigin: anonymous
   referrerPolicy: no-referrer
-- href: "/img/neon.svg"
+- href: /img/neon.svg
   as: image
   type: image/svg+xml
   referrerPolicy: no-referrer
   importance: high
-- href: "https://cdn.kernvalley.us/fonts/roboto.woff2"
+- href: https://cdn.kernvalley.us/fonts/roboto.woff2
   as: font
   type: font/woff2
   crossOrigin: anonymous

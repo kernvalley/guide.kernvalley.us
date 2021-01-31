@@ -1,8 +1,8 @@
 {
-  "name": "jekyll-template",
-  "version": "1.2.0",
+  "name": "krv-guide",
+  "version": "1.0.0",
   "private": true,
-  "description": "A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts, etc.",
+  "description": "A directory of local businesses in the Kern River Valley",
   "config": {
     "icons": "./_data/icons.csv",
     "serve": {
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shgysk8zer0/jekyll-template.git"
+    "url": "git+https://github.com/kernvalley/guide.kernvalley.us.git"
   },
   "keywords": [
     "jekyll",
@@ -30,12 +30,12 @@
     "svg",
     "icons"
   ],
-  "author": "Chris Zuber <shgysk8zer0@gmail.com>",
+  "author": "Chris Zuber <admin@kernvalley.us>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shgysk8zer0/jekyll-template/issues"
+    "url": "https://github.com/kernvalley/guide.kernvalley.us/issues"
   },
-  "homepage": "https://github.com/shgysk8zer0/jekyll-template",
+  "homepage": "https://github.com/kernvalley/guide.kernvalley.us",
   "scripts": {
     "test": "npm run lint",
     "start": "npm run netlify",
@@ -74,7 +74,7 @@
     "eslint-plugin-async-await": "0.0.0",
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-frontmatter": "0.0.8",
-    "netlify-cli": "^3.4.2",
+    "netlify-cli": "^3.4.6",
     "postcss": "^7.0.35",
     "postcss-cli": "^7.1.2",
     "postcss-cssnext": "^3.1.0",
@@ -85,7 +85,7 @@
     "postcss-media-minmax": "^4.0.0",
     "postcss-preset-env": "^6.7.0",
     "postcss-url": "^9.0.0",
-    "rollup": "^2.38.0",
+    "rollup": "^2.38.1",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-url-resolve": "^0.1.1",
     "stylelint": "^13.9.0",
