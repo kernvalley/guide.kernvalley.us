@@ -1,4 +1,14 @@
 [{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : {
+    "namespace": "android_app",
+    "package_name": "us.kernvalley.guide.twa",
+    "sha256_cert_fingerprints": [
+      "44:0C:09:C7:D0:66:94:18:9D:29:3F:B8:DA:BF:14:67:E5:2D:71:00:9A:C8:FB:32:B6:F2:55:7A:66:F9:79:85",
+      "66:6C:C8:0B:09:4C:58:83:03:52:33:BC:A5:E3:92:55:DB:AF:4E:41:0D:BB:6E:9B:4E:3D:2F:A2:DD:27:CB:57"
+    ]
+  }
+}, {
   "relation": ["delegate_permission/common.query_webapk"],
   "target": {
     "namespace": "web",
