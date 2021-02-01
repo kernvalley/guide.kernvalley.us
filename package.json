@@ -22,13 +22,10 @@
     "url": "git+https://github.com/kernvalley/guide.kernvalley.us.git"
   },
   "keywords": [
-    "jekyll",
-    "template",
-    "ecmascript",
-    "javascript",
-    "css",
-    "svg",
-    "icons"
+    "kern valley",
+    "kern river valley",
+    "business listings",
+    "contact info"
   ],
   "author": "Chris Zuber <admin@kernvalley.us>",
   "license": "MIT",
@@ -70,7 +67,7 @@
     "babel-eslint": "^10.1.0",
     "cssnano": "^4.1.10",
     "cssnano-preset-default": "^4.0.7",
-    "eslint": "^7.18.0",
+    "eslint": "^7.19.0",
     "eslint-plugin-async-await": "0.0.0",
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-frontmatter": "0.0.8",
@@ -85,7 +82,7 @@
     "postcss-media-minmax": "^4.0.0",
     "postcss-preset-env": "^6.7.0",
     "postcss-url": "^9.0.0",
-    "rollup": "^2.38.1",
+    "rollup": "^2.38.3",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-url-resolve": "^0.1.1",
     "stylelint": "^13.9.0",

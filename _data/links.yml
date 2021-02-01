@@ -3,15 +3,19 @@ nav:
     icon: home
     href: /
   - label: Dining
-    href: /dining/
-  - label: Motels
-    href: /motels/
+    href: /dining
+    icon: restaurant-icon
+  # - label: Motels
+  #   href: /motels
+  #   icon: hotel-icon
   - label: Stores
-    href: /stores/
-  - label: Civic
-    href: /civic/
+    href: /stores
+    icon: shopping-icon
+  # - label: Civic
+  #   href: /civic
   - label: Other
-    href: /other/
+    href: /other
+    icon: business-icon
 footer:
   - label: KernValley.US
     href: https://kernvalley.us
@@ -33,4 +37,11 @@ footer:
     rel:
       - noopener
       - nofererrer
+      - external
+  - label: Place data
+    href: https://github.com/kernvalley/places
+    icon: link-external
+    rel:
+      - noopener
+      - noreferrer
       - external

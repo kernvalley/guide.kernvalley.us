@@ -2,9 +2,12 @@
 layout: default
 title: Home
 pinned: true
-description: A GitHub repository for easily creating fast, modern, PWA compatible websites
+index: true
+description: A directory of local businesses in the Kern River Valley
 tags:
-  - jekyll
-  - pwa
-  - github template repo
+  - kern valley
+  - kern river valley
+  - business directory
+  - contact info
 ---
+{% include category-directory.html %}

@@ -21,10 +21,13 @@ repo,img/octicons/repo.svg
 issue-opened,img/octicons/issue-opened.svg
 link,img/octicons/link.svg
 link-external,img/octicons/link-external.svg
-chevron-down,img/octicons/chevron-down.svg
-creative-commons-by-sa,img/logos/creative-commons-by-sa.svg
 x,img/octicons/x.svg
-apps,img/apps.svg
 address-book,img/adwaita-icons/mimetypes/x-office-address-book.svg
+apps,img/apps.svg
 calendar,img/octicons/calendar.svg
 search,img/octicons/search.svg
+business-icon,img/types/business.svg
+hotel-icon,img/types/hotel.svg
+restaurant-icon,img/types/restaurant.svg
+shopping-icon,img/types/shopping.svg
+tent-icon,img/types/tent.svg

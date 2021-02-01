@@ -8,7 +8,7 @@ orientation: any
 description: A directory of local businesses in the Kern River Valley
 icons-file: /img/icons.svg
 theme:
-  color: '#007bff'
+  color: '#008000'
   background: '#242424'
 icons:
   - src: /img/favicon.svg
@@ -34,20 +34,50 @@ icons:
     type: image/png
     sizes: 16x16
 screenshots:
-  - src: 'https://i.imgur.com/IjdVouxh.png'
-    sizes: 1024x502
-    type: image/png
-  - src: 'https://i.imgur.com/IjdVouxl.png'
-    sizes: 640x314
-    type: image/png
-  - src: 'https://i.imgur.com/IjdVouxm.png'
-    sizes: 320x157
-    type: image/png
-  - src: 'https://i.imgur.com/IjdVouxt.png'
-    sizes: 160x78
-    type: image/png
+  - src: https://i.imgur.com/bWudF1eh.jpg
+    sizes: 1024x504
+    type: image/jpeg
+  - src: https://i.imgur.com/bWudF1el.jpg
+    sizes: 640x315
+    type: image/jpeg
+  - src: https://i.imgur.com/bWudF1em.jpg
+    sizes: 320x158
+    type: image/jpeg
+  - src: https://i.imgur.com/bWudF1et.jpg
+    sizes: 160x79
+    type: image/jpeg
 # https://web.dev/app-shortcuts/
-shortcuts: []
+shortcuts:
+  - name: Dining
+    url: /dining
+    description: Dining Page on KRV Guide
+    icons:
+      - src: /img/shortcuts/restaurant-192.png
+        type: image/png
+        sizes: 192x192
+      - src: /img/shortcuts/restaurant-32.png
+        type: image/png
+        sizes: 32x32
+  - name: Stores
+    url: /stores
+    description: Grocery and other Stores Page on KRV Guide
+    icons:
+      - src: /img/shortcuts/shopping-192.png
+        type: image/png
+        sizes: 192x192
+      - src: /img/shortcuts/shopping-32.png
+        type: image/png
+        sizes: 32x32
+  - name: Other
+    url: /other
+    description: Misc. listings Page on KRV Guide
+    icons:
+      - src: /img/shortcuts/business-192.png
+        type: image/png
+        sizes: 192x192
+      - src: /img/shortcuts/business-32.png
+        type: image/png
+        sizes: 32x32
 # iarc_rating_id: e84b072d-71b3-4d3e-86ae-31a8ce4e53b7
 related_applications:
   - platform: webapp
@@ -60,17 +90,11 @@ related_applications:
   # - platform: windows
   #   url: "#"
 features:
-  - PWA-ready GitHub template for Jekyll sites
-  - Dark mode support, controlled by (prefers-color-scheme) media query
-  - Includes templates created with SEO via structured data in mind
-  - Initial setup scores 99% on mobile on Page Speed Insights
-  - Responsive design supporting any screen size thanks to CSS grid and use of viewport units
-  - Integtation with system sharing via the Share API (with fallback)
-  - Preset Pull Request and Issue templates, as well as Code of Conduct & Contributing Guidelines
-  - Built-in testing via GitHub Actions, eslint, and stylelint
-  - Always up-to-date thanks to preset Dependabot-v2 config
-  - Setup for quick deployment to Netlify
-  - Version files for Ruby and NodeJS (.rvmrc, .ruby-version, and .nvmrc)
+  - List all available businesses in the Kern River Valley by category
+  - Search for business by name
+  - Find phone numbers, addresses, websites, business hours, and more
+  - Share contact info to other apps
+  - Offline functionality
 # https://github.com/w3c/manifest/wiki/Categories
 categories:
   - business

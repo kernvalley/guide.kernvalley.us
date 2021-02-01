@@ -51,6 +51,5 @@ const config = {
 	],
 	allowedFresh: [
 		'https://api.github.com/users/',
-		'https://api.openweathermap.org/data/',
 	]
 };

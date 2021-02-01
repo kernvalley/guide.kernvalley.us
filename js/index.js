@@ -100,7 +100,8 @@ Promise.allSettled([
 					el.hidden = ! el.title.toLowerCase().includes(name);
 				});
 			}
-			console.info(data.get('name'));
+
+			document.getElementById('main').scrollIntoView({ behavior: 'smooth' });
 		},
 		reset: () => {
 			if (Element.prototype.animate instanceof Function) {
@@ -122,6 +123,8 @@ Promise.allSettled([
 			} else {
 				$('#main .business-listing').unhide();
 			}
+
+			document.getElementById('main').scrollIntoView({ behavior: 'smooth' });
 		}
 	});
 

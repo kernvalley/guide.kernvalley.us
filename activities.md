@@ -1,11 +1,24 @@
 ---
 title: Activities
 layout: business-directory
-category: activities
+permalink: /activities
+index: true
+categories:
+  - activities
+  - campgrounds
 pinned: true
-description: A GitHub repository for easily creating fast, modern, PWA compatible websites
+description: List of recreational activities in the Kern River Valley with extended contact info
 tags:
-  - jekyll
-  - pwa
-  - github template repo
+  - business directory
+  - contact info
+  - businesses
+  - kern valley
+  - kern river valley
+  - rafting
+  - theater
+  - movies
+  - bowling
+  - rafting
+  - campgrounds
+  - camping
 ---
