@@ -6,9 +6,14 @@ index: true
 icon: hotel-icon
 category: lodging
 pinned: true
-description: A GitHub repository for easily creating fast, modern, PWA compatible websites
+description: List of Hotels and Motels in the Kern River Valley with extended contact info
 tags:
-  - jekyll
-  - pwa
-  - github template repo
+  - business directory
+  - contact info
+  - businesses
+  - kern valley
+  - kern river valley
+  - motels
+  - hotels
+  - lodging
 ---

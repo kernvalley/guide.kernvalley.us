@@ -1,14 +1,3 @@
----
-layout: default
-title: Home
-pinned: true
-index: true
-description: A GitHub repository for easily creating fast, modern, PWA compatible websites
-tags:
-  - jekyll
-  - pwa
-  - github template repo
----
 <section id="page-list" class="flex row wrap space-evenly">
 	{% for dir in site.pages %}{% if dir.index and dir.url != page.url %}
 	  <a href="{{ dir.url }}" class="card shadow inline-block center" data-tags="{{ dir.tags | join: ', ' | escape }}">

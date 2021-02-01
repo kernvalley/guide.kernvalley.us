@@ -6,6 +6,10 @@
 	overflow: auto;
 }
 
+#main .categories-section .directory-label {
+	padding: 0.7rem 4rem;
+}
+
 #page-list {
 	gap: 8px;
 }

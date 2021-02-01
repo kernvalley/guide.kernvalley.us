@@ -22,13 +22,10 @@
     "url": "git+https://github.com/kernvalley/guide.kernvalley.us.git"
   },
   "keywords": [
-    "jekyll",
-    "template",
-    "ecmascript",
-    "javascript",
-    "css",
-    "svg",
-    "icons"
+    "kern valley",
+    "kern river valley",
+    "business listings",
+    "contact info"
   ],
   "author": "Chris Zuber <admin@kernvalley.us>",
   "license": "MIT",

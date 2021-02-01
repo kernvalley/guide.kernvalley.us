@@ -6,9 +6,14 @@ category: stores
 icon: shopping-icon
 index: true
 pinned: true
-description: A GitHub repository for easily creating fast, modern, PWA compatible websites
+description: List of Grocery Stores in the Kern River Valley with extended contact info
 tags:
-  - jekyll
-  - pwa
-  - github template repo
+  - business directory
+  - contact info
+  - businesses
+  - kern valley
+  - kern river valley
+  - stores
+  - grocery stores
+  - shopping
 ---

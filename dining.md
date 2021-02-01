@@ -8,9 +8,13 @@ categories:
   - restaurants
   - cafes
 pinned: true
-description: A GitHub repository for easily creating fast, modern, PWA compatible websites
+description: List of Restaurants and Diners in the Kern River Valley with extended contact info
 tags:
-  - jekyll
-  - pwa
-  - github template repo
+  - business directory
+  - contact info
+  - businesses
+  - kern valley
+  - kern river valley
+  - restaurants
+  - dining
 ---
