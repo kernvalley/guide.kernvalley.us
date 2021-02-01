@@ -4,6 +4,7 @@
 	--ad-block-stack-width: var(--ad-block-width);
 	--ad-block-text-width: var(--ad-block-width);
 	--ad-block-image-width: var(--ad-block-width);
+	grid-area: sidebar;
 }
 
 @media (max-width: 800px) {

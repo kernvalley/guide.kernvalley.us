@@ -22,11 +22,12 @@ issue-opened,img/octicons/issue-opened.svg
 link,img/octicons/link.svg
 link-external,img/octicons/link-external.svg
 x,img/octicons/x.svg
+address-book,img/adwaita-icons/mimetypes/x-office-address-book.svg
 apps,img/apps.svg
 calendar,img/octicons/calendar.svg
 search,img/octicons/search.svg
-business-icon,img/place/business.svg
-hotel-icon,img/place/hotel.svg
-restaurant-icon,img/place/restaurant.svg
-shopping-icon,img/place/shopping.svg
-tent-icon,img/place/tent.svg
+business-icon,img/types/business.svg
+hotel-icon,img/types/hotel.svg
+restaurant-icon,img/types/restaurant.svg
+shopping-icon,img/types/shopping.svg
+tent-icon,img/types/tent.svg

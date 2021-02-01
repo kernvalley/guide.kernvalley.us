@@ -1,6 +1,18 @@
-main {
+#main {
 	--link-color: #049ccf;
 	--link-decoration: underline;
+	grid-area: main;
+	max-height: calc(100vh - var(--nav-height, 4rem));
+	overflow: auto;
+}
+
+#page-list {
+	gap: 8px;
+}
+
+#page-list a {
+	max-width: 350px;
+	grow: 1;
 }
 
 article p:first-letter {
@@ -15,4 +27,8 @@ article p:first-letter {
 	grid-template-columns: repeat(auto-fill, minmax(350px, 400px));
 	gap: 8px;
 	justify-content: space-evenly;
+}
+
+.share-business-btn {
+	max-width: 250px;
 }

@@ -40,47 +40,7 @@ icons: /img/icons.svg
 # webmaster-verifications:
 #   google:
 #   bing:
-defaults:
-  - scope:
-      path: _posts
-    values:
-      layout: post
-      author:
-        givenName: Chris
-        familyName: Zuber
-        url: 'https://shgysk8zer0.github.io'
-        gravatar: '43578597e449298f5488c2407c8a8ae5'
-        github: shgysk8zer0
-        twitter: shgysk8zer0
-        linkedin: chris-zuber-455346141/
-      publisher:
-        name: 'KernValley.US'
-        url: 'https://kernvalley.us'
-        logo:
-          url: 'https://kernvalley.us/img/icon-256.png'
-      permalink: /posts/:categories/:year/:month/:day/:title/
-      comments: true
-      ads: false
-      index: true
-  - scope:
-      path: _drafts
-    values:
-      layout: post
-      author:
-        givenName: Chris
-        familyName: Zuber
-        url: 'https://shgysk8zer0.github.io'
-        gravatar: '43578597e449298f5488c2407c8a8ae5'
-        github: 'shgysk8zer0'
-        twitter: shgysk8zer0
-      publisher:
-        name: 'KernValley.US'
-        url: 'https://kernvalley.us'
-        logo:
-          url: 'https://kernvalley.us/img/icon-256.png'
-      permalink: /posts/:categories/:year/:month/:day/:title/
-      comments: false
-      ads: false
+defaults: []
 plugins:
   - jekyll-gist
   - jekyll-youtube

@@ -11,8 +11,8 @@ nav:
   - label: Stores
     href: /stores
     icon: shopping-icon
-  - label: Civic
-    href: /civic
+  # - label: Civic
+  #   href: /civic
   - label: Other
     href: /other
     icon: business-icon

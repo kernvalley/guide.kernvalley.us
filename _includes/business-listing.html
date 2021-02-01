@@ -9,8 +9,10 @@
 	{% if include.place.email %}{% include common/email.html telephone=include.place.email %}<br />{% endif %}
 	{% if include.place.address %}{% include common/address.html address=include.place.address %}<br />{% endif %}
 	<br />
-	<button type="button" is="share-button" class="btn btn-outline" text="Check out {{ include.place.name | url_encode }}" url="{{ page.url }}#{{ include.place.identifier }}" hidden="">
-		<span>Share</span>
-		{% include common/icon.html icon="public-share" height="20" width="20" fill="currentColor" %}
-	</button>
+	<div class="flex row space-evenly">
+		<button type="button" is="share-button" class="btn btn-outline share-business-btn grow-1" text="Check out {{ include.place.name | url_encode }}" url="{{ page.url }}#{{ include.place.identifier }}" hidden="">
+			<span>Share</span>
+			{% include common/icon.html icon="public-share" height="20" width="20" fill="currentColor" %}
+		</button>
+	</div>
 </div>

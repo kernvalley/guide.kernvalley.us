@@ -1,10 +1,14 @@
 ---
 title: Other
 layout: business-directory
+permalink: /other
+index: true
+icon: business-icon
 categories:
-  - bars
+  - civic
   - businesses
   - financial
+  - bars
 pinned: true
 description: A GitHub repository for easily creating fast, modern, PWA compatible websites
 tags:

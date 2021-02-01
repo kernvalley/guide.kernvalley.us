@@ -1,6 +1,9 @@
 ---
 title: Restaurants
 layout: business-directory
+permalink: /dining
+index: true
+icon: restaurant-icon
 categories:
   - restaurants
   - cafes
