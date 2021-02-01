@@ -1,0 +1,41 @@
+<div class="flex row wrap space-around">
+	{% for link in include.sameAs %}
+		{% if link contains "https://www.facebook.com/" %}
+			<a href="{{ link }}" itemprop="sameAs" rel="noreferrer noopener external" class="social-link facebook" title="Facebook">
+				{% include common/icon.html icon="facebook" height="36" width="36" class="social-icon" %}
+			</a>
+		{% elsif link contains "https://twitter.com" %}
+			<a href="{{ link }}" itemprop="sameAs" rel="noreferrer noopener external" class="social-link twitter" title="Twitter">
+				{% include common/icon.html icon="twitter" height="36" width="36" class="social-icon" %}
+			</a>
+		{% elsif link contains "https://instagram.com/" %}
+			<a href="{{ link }}" itemprop="sameAs" rel="noreferrer noopener external" class="social-link instagram" title="Instagram">
+				<img src="https://cdn.kernvalley.us/img/logos/instagram.svg" height="36" width="36" loading="lazy" decoding="async" crossorigin="anonymous" referrerpolicy="no-referrer" alt="Instagram" />
+			</a>
+		{% elsif link contains "https://www.linkedin.com/" %}
+			<a href="{{ link }}" itemprop="sameAs" rel="noreferrer noopener external" class="social-link linkedin" title="LinkedIn">
+				{% include common/icon.html icon="linkedin" height="36" width="36" class="social-icon" %}
+			</a>
+		{% elsif link contains "https://github.com/" %}
+			<a href="{{ link }}" itemprop="sameAs" rel="noreferrer noopener external" class="social-link github" title="GitHub">
+				{% include common/icon.html icon="mark-github" height="36" width="36" class="social-icon" %}
+			</a>
+		{% elsif link contains "https://www.yelp.com/" %}
+			<a href="{{ link }}" itemprop="sameAs" rel="noreferrer noopener external" class="social-link yelp" title="Yelp">
+				{% include common/icon.html icon="yelp" height="36" width="36" class="social-icon" %}
+			</a>
+		{% elsif link contains "https://www.tripadvisor.com/" %}
+			<a href="{{ link }}" itemprop="sameAs" rel="noreferrer noopener external" class="social-link tripadvisor" title="TripAdvisor">
+				{% include common/icon.html icon="tripadvisor" height="36" width="36" class="social-icon" %}
+			</a>
+		{% elsif link contains "https://www.youtube.com/" %}
+			<a href="{{ link }}" itemprop="sameAs" rel="noreferrer noopener external" class="social-link youtube" title="YouTube">
+				{% include common/icon.html icon="youtube" height="36" width="36" class="social-icon" %}
+			</a>
+		{% else %}
+			<a href="{{ link }}" itemprop="sameAs" rel="noreferrer noopener external" class="social-link web" title="Website">
+				{% include common/icon.html icon="link" height="36" width="36" class="social-icon" %}
+			</a>
+		{% endif %}
+	{% endfor %}
+</div>
