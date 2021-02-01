@@ -5,9 +5,9 @@ nav:
   - label: Dining
     href: /dining
     icon: restaurant-icon
-  - label: Motels
-    href: /motels
-    icon: hotel-icon
+  # - label: Motels
+  #   href: /motels
+  #   icon: hotel-icon
   - label: Stores
     href: /stores
     icon: shopping-icon
@@ -40,7 +40,7 @@ footer:
       - external
   - label: Place data
     href: https://github.com/kernvalley/places
-    icon: mark-github
+    icon: link-external
     rel:
       - noopener
       - noreferrer
