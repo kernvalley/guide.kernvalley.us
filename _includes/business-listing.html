@@ -12,7 +12,17 @@
 	{% if include.place.telephone %}{% include common/telephone.html telephone=include.place.telephone %}<br />{% endif %}
 	{% if include.place.url %}{% include common/url.html url=include.place.url %}{% endif %}
 	{% if include.place.email %}{% include common/email.html telephone=include.place.email %}<br />{% endif %}
-	{% if include.place.address %}{% include common/address.html address=include.place.address %}<br />{% endif %}
+	{% if include.place.address %}
+		<br />
+		<a href="https://maps.kernvalley.us/#{{ include.place.identifier }}" class="clearfix block maps-link color-inherit" rel="noopener noreferrer external" title="Open in Kern Valley Maps">
+			{% include common/icon.html icon="map" width="20" height="20" fill="currentColor" class="float-left" %}
+			<div class="float-left">
+				{% include common/address.html address=include.place.address %}
+			</div>
+		</a>
+		<br />
+	{% endif %}
+	{% if include.place.sameAs %}{% include same-as-links.html sameAs=include.place.sameAs %}{% endif %}
 	<br />
 	<div class="flex row space-evenly">
 		<button type="button" is="share-button" class="btn btn-outline share-business-btn grow-1" text="Check out {{ include.place.name | url_encode }}" url="{{ page.url }}#{{ include.place.identifier }}" hidden="">

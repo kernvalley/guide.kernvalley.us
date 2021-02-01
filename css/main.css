@@ -11,6 +11,10 @@
 	font-size: 20px;
 }
 
+.business-listing {
+	line-height: 1.4;
+}
+
 #page-list {
 	gap: 8px;
 }
