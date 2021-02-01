@@ -52,10 +52,10 @@ shortcuts:
     url: /dining
     description: Dining Page on KRV Guide
     icons:
-      - src: /img/shortcuts/restuarant-192.png
+      - src: /img/shortcuts/restaurant-192.png
         type: image/png
         sizes: 192x192
-      - src: /img/shortcuts/restuarant-32.png
+      - src: /img/shortcuts/restaurant-32.png
         type: image/png
         sizes: 32x32
   - name: Stores
