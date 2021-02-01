@@ -1,4 +1,4 @@
-export const GA = null;
+export const GA = 'G-HYL4JXDHMQ';
 
 export const env = (location.hostname === 'localhost' || location.hostname.endsWith('.netlify.live'))
 	? 'development'
@@ -7,5 +7,5 @@ export const env = (location.hostname === 'localhost' || location.hostname.endsW
 export const dev = env === 'development';
 
 export const site = {
-	title: 'Jekyll Template',
+	title: 'KRV Guide',
 };
