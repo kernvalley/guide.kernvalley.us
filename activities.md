@@ -3,9 +3,11 @@ title: Activities
 layout: business-directory
 permalink: /activities
 index: true
-category: activities
+categories:
+  - activities
+  - campgrounds
 pinned: true
-description: List of recreational businesses in the Kern River Valley with extended contact info
+description: List of recreational activities in the Kern River Valley with extended contact info
 tags:
   - business directory
   - contact info
@@ -17,4 +19,6 @@ tags:
   - movies
   - bowling
   - rafting
+  - campgrounds
+  - camping
 ---
