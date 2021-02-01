@@ -38,3 +38,10 @@ footer:
       - noopener
       - nofererrer
       - external
+  - label: Place data
+    href: https://github.com/kernvalley/places
+    icon: mark-github
+    rel:
+      - noopener
+      - noreferrer
+      - external

@@ -34,18 +34,18 @@ icons:
     type: image/png
     sizes: 16x16
 screenshots:
-  - src: 'https://i.imgur.com/IjdVouxh.png'
-    sizes: 1024x502
-    type: image/png
-  - src: 'https://i.imgur.com/IjdVouxl.png'
-    sizes: 640x314
-    type: image/png
-  - src: 'https://i.imgur.com/IjdVouxm.png'
-    sizes: 320x157
-    type: image/png
-  - src: 'https://i.imgur.com/IjdVouxt.png'
-    sizes: 160x78
-    type: image/png
+  - src: https://i.imgur.com/bWudF1eh.jpg
+    sizes: 1024x504
+    type: image/jpeg
+  - src: https://i.imgur.com/bWudF1el.jpg
+    sizes: 640x315
+    type: image/jpeg
+  - src: https://i.imgur.com/bWudF1em.jpg
+    sizes: 320x158
+    type: image/jpeg
+  - src: https://i.imgur.com/bWudF1et.jpg
+    sizes: 160x79
+    type: image/jpeg
 # https://web.dev/app-shortcuts/
 shortcuts:
   - name: Dining
