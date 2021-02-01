@@ -82,8 +82,8 @@ shortcuts:
 related_applications:
   - platform: webapp
     url: /manifest.json
-  # - platform: play
-  #   id: "twa.weather.kernvalley"
+  - platform: play
+    id: "us.kernvalley.guide.twa"
   #   url: "#"
   # - platform: itunes
   #   url: "#"
