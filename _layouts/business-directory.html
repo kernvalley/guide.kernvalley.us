@@ -19,7 +19,7 @@ data-layout: default
 		{% assign groups = site.data.places[type] | sort: "name" | group_by: "@type" %}
 		{% for group in groups %}
 			<section class="categories-section card shadow">
-				<h3 class="directory-label sticky top shadow background-accent color-alt">{{ group.name }}</h3>
+				<h3 class="directory-label sticky top z-1 shadow background-accent color-alt">{% include common/schema-type.html type=group.name %}</h3>
 				<div class="directory grid">
 					{% for place in group.items %}
 						{% if place.address.streetAddress or place.telephone %}
