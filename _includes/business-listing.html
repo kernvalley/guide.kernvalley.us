@@ -6,11 +6,12 @@
 		</a>
 	</h3>
 	{% if include.place.image %}{%for img in include.place.image %}
-		<img itemprop="image" src="{{ img.url }}" height="{{ img.height }}" width="{{ img.width }}" loading="lazy" decoding="async" crossorigin="anonymous" referrerpolicy="no-referrer" alt="{{ img.name }}" /><br />
+		{% include common/image.html src=img.url height=img.height width=img.width alt=img.name itemprop="image" %}
+		<br />
 	{% endfor %}{% endif %}
 	{% if include.place.description %}<blockquote itemprop="description">{{ include.place.description }}</blockquote>{% endif %}
 	{% if include.place.telephone %}{% include common/telephone.html telephone=include.place.telephone %}<br />{% endif %}
-	{% if include.place.url %}{% include common/url.html url=include.place.url %}{% endif %}
+	{% if include.place.url %}{% include common/url.html url=include.place.url params=site.data.utm %}{% endif %}
 	{% if include.place.email %}{% include common/email.html telephone=include.place.email %}<br />{% endif %}
 	{% if include.place.address %}
 		<br />
@@ -22,7 +23,7 @@
 		</a>
 		<br />
 	{% endif %}
-	{% if include.place.sameAs %}{% include same-as-links.html sameAs=include.place.sameAs %}{% endif %}
+	{% if include.place.sameAs %}{% include common/same-as-links.html sameAs=include.place.sameAs %}{% endif %}
 	<br />
 	<div class="flex row space-evenly">
 		<button type="button" is="share-button" class="btn btn-outline share-business-btn grow-1" text="Check out {{ include.place.name | url_encode }}" url="{{ page.url }}#{{ include.place.identifier }}" hidden="">

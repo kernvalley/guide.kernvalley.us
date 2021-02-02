@@ -9,7 +9,7 @@ data-layout: default
 	{% assign places = site.data.places[page.category] | sort: "name" %}
 	<section class="directory grid">
 		{% for place in places %}
-			{% if place.address.streetAddress or place.telephone %}
+			{% if place.address.streetAddress or place.telephone or place.url %}
 				{% include business-listing.html place=place %}
 			{% endif %}
 		{% endfor %}
@@ -22,7 +22,7 @@ data-layout: default
 				<h3 class="directory-label sticky top z-1 shadow background-accent color-alt">{% include common/schema-type.html type=group.name %}</h3>
 				<div class="directory grid">
 					{% for place in group.items %}
-						{% if place.address.streetAddress or place.telephone %}
+						{% if place.address.streetAddress or place.telephone or place.url %}
 							{% include business-listing.html place=place %}
 						{% endif %}
 					{% endfor %}
