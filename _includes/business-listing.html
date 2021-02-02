@@ -11,7 +11,7 @@
 	{% endfor %}{% endif %}
 	{% if include.place.description %}<blockquote itemprop="description">{{ include.place.description }}</blockquote>{% endif %}
 	{% if include.place.telephone %}{% include common/telephone.html telephone=include.place.telephone %}<br />{% endif %}
-	{% if include.place.url %}{% include common/url.html url=include.place.url %}{% endif %}
+	{% if include.place.url %}{% include common/url.html url=include.place.url params=site.data.utm %}{% endif %}
 	{% if include.place.email %}{% include common/email.html telephone=include.place.email %}<br />{% endif %}
 	{% if include.place.address %}
 		<br />
