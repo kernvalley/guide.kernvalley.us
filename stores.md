@@ -2,7 +2,9 @@
 title: Stores
 layout: business-directory
 permalink: /stores
-category: stores
+categories:
+  - stores
+  - gas
 icon: shopping-icon
 index: true
 pinned: true
@@ -16,4 +18,5 @@ tags:
   - stores
   - grocery stores
   - shopping
+  - hardware
 ---
