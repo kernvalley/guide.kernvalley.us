@@ -78,7 +78,7 @@ shortcuts:
       - src: /img/shortcuts/business-32.png
         type: image/png
         sizes: 32x32
-# iarc_rating_id: e84b072d-71b3-4d3e-86ae-31a8ce4e53b7
+iarc_rating_id: 6b80d8b3-64c2-42f8-8727-f66e3e1e3ce5
 related_applications:
   - platform: webapp
     url: /manifest.json
