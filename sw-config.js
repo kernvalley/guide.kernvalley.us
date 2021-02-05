@@ -46,6 +46,8 @@ const config = {
 		'https://cdn.kernvalley.us/fonts/roboto.woff2',
 	].map(path => new URL(path, location.origin).href),
 	allowed: [
+		'https://www.google-analytics.com/analytics.js',
+		'https://www.googletagmanager.com/gtag/js',
 		'/https://i.imgur.com/',
 		/https:\/\/*\.githubusercontent\.com\/u\/*/,
 	],
