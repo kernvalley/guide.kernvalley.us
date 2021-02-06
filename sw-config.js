@@ -9,6 +9,9 @@ const config = {
 	fresh: [
 		'{{ site.pages | where: "pinned", true | map: "url" | join: "', '" }}',
 		'/manifest.json',
+		'/reset',
+		'/js/reset.js',
+		'https://cdn.kernvalley.us/js/pwa-reset.js',
 		'https://apps.kernvalley.us/apps.json',
 	].map(path => new URL(path, location.origin).href),
 	stale: [

@@ -26,7 +26,10 @@
 	{% if include.place.openingHoursSpecification %}
 		<br />
 		<details class="business-hours">
-			<summary class="hours-label">Business Hours</summary>
+			<summary class="hours-label">
+				<span>Business Hours</span>
+				{% include common/icon.html icon="clock" width="20" height="20" fill="currentColor" %}
+			</summary>
 			<br />
 			<business-hours class="block" itemprop="openingHoursSpecification">
 				{% for day in include.place.openingHoursSpecification %}
