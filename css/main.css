@@ -41,3 +41,10 @@ article p:first-letter {
 .share-business-btn {
 	max-width: 250px;
 }
+
+.business-hours .hours-label {
+	background-color: var(--accent-color);
+	color: var(--alt-color);
+	padding: 0.3em 0.7em;
+	border-radius: 6px;
+}
