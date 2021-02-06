@@ -23,6 +23,24 @@
 		</a>
 		<br />
 	{% endif %}
+	{% if include.place.openingHoursSpecification %}
+		<br />
+		<details class="business-hours">
+			<summary class="hours-label">Business Hours</summary>
+			<br />
+			<business-hours class="block" itemprop="openingHoursSpecification">
+				{% for day in include.place.openingHoursSpecification %}
+					{% assign dow=day.dayOfWeek | remove: 'https://schema.org/' | remove: 'http://schema.org/' %}
+					<link itemprop="dayOfWeek" href="https://schema.org/{{ dow }}" />
+					<b>{{ dow | remove: 'rsday' | remove: 'urday' | remove: 'day' | remove: 'nes' }}:</b>
+					<time datetime="T{{ day.opens | remove: 'T' }}" itemprop="opens" slot="opens-{{ dow | downcase }}">{{ day.opens | prepend: 'T' | date: '%I:%M %p' }}</time>
+					<span>—</span>
+					<time datetime="T{{ day.closes | remove: 'T' }}" itemprop="closes" slot="closes-{{ dow | downcase }}">{{ day.closes | prepend: 'T' | date: '%I:%M %p' }}</time>{% unless forloop.end %}<br />{% endunless %}
+				{% endfor %}
+			</business-hours>
+		</details>
+		<br />
+	{% endif %}
 	{% if include.place.sameAs %}{% include common/same-as-links.html sameAs=include.place.sameAs %}{% endif %}
 	<br />
 	<div class="flex row space-evenly">
