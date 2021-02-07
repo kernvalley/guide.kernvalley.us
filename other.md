@@ -8,8 +8,6 @@ categories:
   - civic
   - businesses
   - financial
-  - gas
-  - bars
 pinned: true
 description: List of Misc. businesses in the Kern River Valley with extended contact info
 tags:
