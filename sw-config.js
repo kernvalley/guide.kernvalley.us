@@ -8,10 +8,6 @@ const config = {
 	version: '{{ site.data.app.version | default: site.version }}',
 	fresh: [
 		'{{ site.pages | where: "pinned", true | map: "url" | join: "', '" }}',
-		'/manifest.json',
-		'/reset',
-		'/js/reset.js',
-		'https://cdn.kernvalley.us/js/pwa-reset.js',
 		'https://apps.kernvalley.us/apps.json',
 	].map(path => new URL(path, location.origin).href),
 	stale: [
@@ -34,16 +30,15 @@ const config = {
 
 		/* Images & Icons */
 		'/img/icons.svg',
-		'/img/neon.svg',
 		'/img/apple-touch-icon.png',
 		'/img/icon-512.png',
 		'/img/icon-192.png',
 		'/img/icon-32.png',
 		'/img/favicon.svg',
+		'https://cdn.kernvalley.us/img/raster/missing-image.png',
 		'https://cdn.kernvalley.us/img/keep-kern-clean.svg',
 		'https://cdn.kernvalley.us/img/logos/play-badge.svg',
 		'https://cdn.kernvalley.us/img/logos/instagram.svg',
-		'https://cdn.kernvalley.us/img/markers.svg',
 
 		/* Fonts */
 		'https://cdn.kernvalley.us/fonts/roboto.woff2',
