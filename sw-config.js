@@ -9,11 +9,11 @@ const config = {
 	fresh: [
 		'{{ site.pages | where: "pinned", true | map: "url" | join: "', '" }}',
 		'https://apps.kernvalley.us/apps.json',
+		'/manifest.json',
 	].map(path => new URL(path, location.origin).href),
 	stale: [
 		/* JS */
 		'/js/index.min.js',
-		'https://cdn.kernvalley.us/components/share-target.js',
 
 		/* CSS */
 		'/css/index.min.css',
@@ -22,7 +22,7 @@ const config = {
 		'https://cdn.kernvalley.us/components/github/user.css',
 		'https://cdn.kernvalley.us/components/pwa/prompt.css',
 
-		/* `customElements`templates */
+		/* `customElements` templates */
 		'https://cdn.kernvalley.us/components/toast-message.html',
 		'https://cdn.kernvalley.us/components/share-to-button/share-to-button.html',
 		'https://cdn.kernvalley.us/components/github/user.html',
