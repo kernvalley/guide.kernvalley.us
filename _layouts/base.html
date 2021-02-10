@@ -7,7 +7,7 @@
 	{% if page.pageLevelAds %}data-page-level-ads="{{ page.pageLevelAds }}"{% endif %}
 	data-layout="{{ page.data-layout | default: layout.data-layout | default: layout.name }}"
 	data-theme="{{ page.theme | default: layout.theme }}"
-	itemtype="{{ page.itemtype | default: 'http://schema.org/WebPage' }}"
+	itemtype="{{ page.itemtype | default: layout.itemtype | default: 'http://schema.org/WebPage' }}"
 	itemscope=""
 >
 {% include common/head.html %}
