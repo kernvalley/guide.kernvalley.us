@@ -1,4 +1,4 @@
-<div id="{{ include.place.identifier }}" class="card business-listing" title="{{ include.place.name | escape }}" itemtype="https://schema.org/{{ include.place['@type'] | default: 'Place' }}" itemscope="">
+<div id="{{ include.place.identifier }}" class="card business-listing" title="{{ include.place.name | escape }}" itemprop="{{ include.itemprop | default: 'itemListElement' }}" itemtype="https://schema.org/{{ include.place['@type'] | default: 'Place' }}" itemscope="">
 	<h3 class="center">
 		<span itemprop="name">{{ include.place.name }}</span>
 		<a href="{{ page.url }}#{{ include.place.identifier }}" class="place-link color-inherit" title="{{ include.place.name | escape }}">
