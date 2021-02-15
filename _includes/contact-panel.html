@@ -1,0 +1,16 @@
+<details class="fixed bottom left shadow inline-block color-default background-primary" id="contact-panel">
+	<summary class="btn btn-primary block clearfix">
+		<span>Contact</span>
+		{% include common/icon.html icon="chevron-down" height="16" width="16" fill="currentColor" class="icon float-right when-open" %}
+		{% include common/icon.html icon="chevron-up" height="16" width="16" fill="currentColor" class="icon float-right when-closed" %}
+	</summary>
+	<contact-form phone="" class="block overflow-auto" action="{{ include.action | default: 'https://contact.kernvalley.us/api/slack' }}">
+		<h3 slot="legend">{{ include.legend | default: 'Contact KernValley.US' }}</h3>
+		<svg class="icon" slot="submit-icon" fill="currentColor" width="20" height="20" role="img" aria-hidden="true">
+			<use xlink:href="/img/icons.svg#check"></use>
+		</svg>
+		<svg class="icon" slot="reset-icon" fill="currentColor" width="20" height="20" role="img" aria-hidden="true">
+			<use xlink:href="/img/icons.svg#x"></use>
+		</svg>
+	</contact-form>
+</details>

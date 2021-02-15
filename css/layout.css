@@ -43,6 +43,13 @@ body > button.btn[is="share-button"] {
 	font-size: 1.5rem;
 }
 
+#contact-panel {
+	max-width: 400px;
+	width: calc(100% - 20px);
+	left: 10px;
+	z-index: 5;
+}
+
 @media (max-width: 800px) {
 	.mobile-hidden {
 		display: none;

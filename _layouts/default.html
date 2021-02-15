@@ -7,11 +7,21 @@ layout: base
 sidebar: false
 pinned-posts: 3
 recent-posts: 8
-main-itemtype: Event
 ---
-{% unless page.no-header == true %}{% include header.html %}{% endunless %}
-{% unless page.no-nav == true %}{% include common/nav.html %}{% endunless %}
+{% unless page.no-header == true or layout.no-header == true %}
+	{% include header.html %}
+{% endunless %}
+{% unless page.no-nav == true or layout.no-nav == true %}
+	{% include common/nav.html %}
+{% endunless %}
 <main id="main">{{ content }}</main>
-{% unless page.no-sidebar %}{% include sidebar.html recent-posts=layout.recent-posts pinned-posts=layout.pinned-posts %}{% endunless %}
-{% unless page.no-footer == true %}{% include common/footer.html keep-kern-clean=site.keep-kern-clean %}{% endunless %}
-{% unless page.no-share == true %}{% include common/share-button.html text=page.description %}{% endunless %}
+{% unless page.no-sidebar or layout.no-sidebar == true %}
+	{% include sidebar.html recent-posts=layout.recent-posts pinned-posts=layout.pinned-posts %}
+{% endunless %}
+{% unless page.no-footer == true or layout.no-footer == true %}
+	{% include common/footer.html keep-kern-clean=site.keep-kern-clean %}
+{% endunless %}
+{% unless page.no-share == true or layout.no-share == true %}
+	{% include common/share-button.html text=page.description %}
+{% endunless %}
+{% include contact-panel.html %}

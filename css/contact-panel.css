@@ -1,0 +1,34 @@
+#contact-panel[open] {
+	z-index: var(--z-top);
+}
+
+#contact-panel:not([open]) .when-open {
+	display: none;
+}
+
+#contact-panel[open] .when-closed {
+	display: none;
+}
+
+#contact-panel > summary {
+	padding: 16px;
+	border-radius: 8px 8px 0 0;
+}
+
+#contact-panel > contact-form {
+	max-height: 410px;
+	height: 90vh;
+}
+
+@media (max-width: 600px) {
+	#contact-panel {
+		max-width: 95vw;
+		width: 95vw;
+		left: 2.5vw;
+		right: 2.5vw;
+	}
+
+	#contact-panel > contact-form {
+		max-height: calc(85vh - var(--nav-height, 4rem));
+	}
+}
