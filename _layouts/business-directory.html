@@ -8,9 +8,9 @@ itemtype: https://schema.org/CollectionPage
 {% include common/share-buttons.html facebook=true twitter=true linkedin=true %}
 {% if page.category %}
 	{% assign places = site.data.places[page.category] | sort: "name" %}
-	<section class="directory grid">
+	<section class="directory grid" itemprop="about" itemtype="https://schema.org/ItemList" itemscope="">
 		{% for place in places %}
-			{% if place.address.streetAddress or place.telephone or place.url %}
+			{% if place.address.streetAddress or place.telephone or place.url or place.sameAs %}
 				{% include business-listing.html place=place %}
 			{% endif %}
 		{% endfor %}
@@ -19,11 +19,11 @@ itemtype: https://schema.org/CollectionPage
 	{% for type in page.categories %}
 		{% assign groups = site.data.places[type] | sort: "name" | group_by: "@type" %}
 		{% for group in groups %}
-			<section class="categories-section card shadow">
-				<h3 class="directory-label sticky top z-1 shadow background-accent color-alt">{% include common/schema-type.html type=group.name %}</h3>
+			<section class="categories-section card shadow" itemprop="about" itemtype="https://schema.org/ItemList" itemscope="">
+				<h3 class="directory-label sticky top z-1 shadow background-accent color-alt" itemprop="name">{% include common/schema-type.html type=group.name %}</h3>
 				<div class="directory grid">
 					{% for place in group.items %}
-						{% if place.address.streetAddress or place.telephone or place.url %}
+						{% if place.address.streetAddress or place.telephone or place.url or place.sameAs %}
 							{% include business-listing.html place=place %}
 						{% endif %}
 					{% endfor %}
