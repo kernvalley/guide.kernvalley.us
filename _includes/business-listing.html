@@ -1,4 +1,7 @@
 <div id="{{ include.place.identifier }}" class="card business-listing" title="{{ include.place.name | escape }}" itemprop="{{ include.itemprop | default: 'itemListElement' }}" itemtype="https://schema.org/{{ include.place['@type'] | default: 'Place' }}" itemscope="">
+	{% if include.place.nonprofitStatus %}
+		<link itemprop="nonprofitStatus" content="https://schema.org/{{ include.place.nonprofitStatus | remove: 'https://schema.org/' }}" />
+	{% endif %}
 	<h3 class="center">
 		<span itemprop="name">{{ include.place.name }}</span>
 		<a href="{{ page.url }}#{{ include.place.identifier }}" class="place-link color-inherit" title="{{ include.place.name | escape }}">
@@ -6,14 +9,24 @@
 		</a>
 	</h3>
 	{% if include.place.image %}{%for img in include.place.image %}
-		{% include common/image.html src=img.url height=img.height width=img.width alt=img.name itemprop="image" %}
+		<div class="center">
+			{% include common/image.html src=img.url height=img.height width=img.width alt=img.name itemprop="image" %}
+		</div>
 		<br />
 	{% endfor %}{% endif %}
 	{% if include.place.description %}<blockquote itemprop="description">{{ include.place.description }}</blockquote>{% endif %}
-	{% if include.place.telephone %}{% include common/telephone.html telephone=include.place.telephone %}<br />{% endif %}
-	{% if include.place.url %}{% include common/url.html url=include.place.url params=site.data.utm %}{% endif %}
-	{% if include.place.email %}{% include common/email.html telephone=include.place.email %}<br />{% endif %}
-	{% if include.place.address %}
+	<div class="contact-links">
+		{% if include.place.telephone %}
+			{% include common/telephone.html telephone=include.place.telephone %}<br />
+		{% endif %}
+		{% if include.place.url %}
+			{% include common/url.html url=include.place.url params=site.data.utm %}<br />
+		{% endif %}
+		{% if include.place.email %}
+			{% include common/email.html email=include.place.email %}<br />
+		{% endif %}
+	</div>
+	{% if include.place.address and include.place.geo %}
 		<br />
 		<a href="https://maps.kernvalley.us/#{{ include.place.identifier }}" class="clearfix block maps-link color-inherit" rel="noopener noreferrer external" title="Open in Kern Valley Maps">
 			{% include common/icon.html icon="map" width="20" height="20" fill="currentColor" class="float-left" %}
@@ -21,6 +34,31 @@
 				{% include common/address.html address=include.place.address %}
 			</div>
 		</a>
+		<br />
+	{% elsif include.place.address %}
+		<br />
+		<span class="clearfix blockcolor-inherit">
+			{% include common/icon.html icon="map" width="20" height="20" fill="currentColor" class="float-left" %}
+			<div class="float-left">
+				{% include common/address.html address=include.place.address %}
+			</div>
+		</span>
+		<br />
+	{% elsif include.place.location.address and include.place.location.geo %}
+		<a href="https://maps.kernvalley.us/#{{ include.place.identifier }}" class="clearfix block maps-link color-inherit" rel="noopener noreferrer external" title="Open in Kern Valley Maps">
+			{% include common/icon.html icon="map" width="20" height="20" fill="currentColor" class="float-left" %}
+			<div class="float-left">
+				{% include common/address.html address=include.place.location.address %}
+			</div>
+		</a>
+	{% elsif include.place.location.address %}
+		<br />
+		<span class="clearfix blockcolor-inherit">
+			{% include common/icon.html icon="map" width="20" height="20" fill="currentColor" class="float-left" %}
+			<div class="float-left">
+				{% include common/address.html address=include.place.location.address %}
+			</div>
+		</span>
 		<br />
 	{% endif %}
 	{% if include.place.openingHoursSpecification %}
@@ -43,11 +81,33 @@
 			</business-hours>
 		</details>
 		<br />
+	{% elsif include.place.location.openingHoursSpecification %}
+		<br />
+		<details class="business-hours">
+			<summary class="hours-label">
+				<span>Business Hours</span>
+				{% include common/icon.html icon="clock" width="20" height="20" fill="currentColor" %}
+			</summary>
+			<br />
+			<business-hours class="block" itemprop="openingHoursSpecification">
+				{% for day in include.place.location.openingHoursSpecification %}
+					{% assign dow=day.dayOfWeek | remove: 'https://schema.org/' | remove: 'http://schema.org/' %}
+					<link itemprop="dayOfWeek" href="https://schema.org/{{ dow }}" />
+					<b>{{ dow | remove: 'rsday' | remove: 'urday' | remove: 'day' | remove: 'nes' }}:</b>
+					<time datetime="T{{ day.opens | remove: 'T' }}" itemprop="opens" slot="opens-{{ dow | downcase }}">{{ day.opens | prepend: 'T' | date: '%I:%M %p' }}</time>
+					<span>—</span>
+					<time datetime="T{{ day.closes | remove: 'T' }}" itemprop="closes" slot="closes-{{ dow | downcase }}">{{ day.closes | prepend: 'T' | date: '%I:%M %p' }}</time>{% unless forloop.end %}<br />{% endunless %}
+				{% endfor %}
+			</business-hours>
+		</details>
+		<br />
 	{% endif %}
-	{% if include.place.sameAs %}{% include common/same-as-links.html sameAs=include.place.sameAs %}{% endif %}
+	{% if include.place.sameAs %}
+		{% include common/same-as-links.html sameAs=include.place.sameAs %}
+	{% endif %}
 	<br />
 	<div class="flex row space-evenly">
-		<button type="button" is="share-button" class="btn btn-outline share-business-btn grow-1" text="Check out {{ include.place.name | url_encode }}" url="{{ page.url }}#{{ include.place.identifier }}" hidden="">
+		<button type="button" is="share-button" class="btn btn-outline share-business-btn grow-1" text="Check out {{ include.place.name | escape }} on {{ site.title | escape }}" sharetitle="{{ include.place.name | escape }}" url="{{ page.url }}#{{ include.place.identifier }}" hidden="">
 			<span>Share</span>
 			{% include common/icon.html icon="public-share" height="20" width="20" fill="currentColor" %}
 		</button>
