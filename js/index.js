@@ -38,8 +38,8 @@ $(document.documentElement).toggleClass({
 
 if (typeof GA === 'string' && GA.length !== 0) {
 	requestIdleCallback(() => {
-		importGa(GA).then(async ({ ga }) => {
-			if (ga instanceof Function) {
+		importGa(GA).then(async ({ ga, hasGa }) => {
+			if (hasGa()) {
 				ga('create', GA, 'auto');
 				ga('set', 'transport', 'beacon');
 				ga('send', 'pageview');
@@ -60,16 +60,16 @@ Promise.allSettled([
 	init().catch(console.error);
 
 	$('#searchForm').on({
-		submit: event => {
+		submit: async event => {
 			event.preventDefault();
 			const data = new FormData(event.target);
 			const name = data.get('name').toLowerCase();
 
 			if (Element.prototype.animate instanceof Function) {
-				$('#main .business-listing[title]').each(el => {
+				await $('#main .business-listing[title]').map(el => {
 					const matches = el.title.toLowerCase().includes(name);
 					if (matches && el.hidden) {
-						el.animate([{
+						const anim = el.animate([{
 							transform: 'scale(0.1)',
 							opacity: 0,
 						}, {
@@ -82,8 +82,9 @@ Promise.allSettled([
 						});
 
 						el.hidden = false;
+						return anim.finished;
 					} else if (! matches && ! el.hidden) {
-						el.animate([{
+						return el.animate([{
 							transform: 'none',
 							opacity: 1
 						}, {
@@ -100,9 +101,16 @@ Promise.allSettled([
 				$('#main .business-listing[title]').each(el => {
 					el.hidden = ! el.title.toLowerCase().includes(name);
 				});
+				return Promise.resolve();
 			}
 
-			document.getElementById('main').scrollIntoView({ behavior: 'smooth' });
+			const matched = document.querySelector('#main .business-listing:not([hidden])');
+
+			if (matched instanceof HTMLElement) {
+				requestAnimationFrame(() => {
+					matched.scrollIntoView({ behavior: 'smooth', block: 'end' });
+				});
+			}
 		},
 		reset: () => {
 			if (Element.prototype.animate instanceof Function) {
@@ -139,6 +147,7 @@ Promise.allSettled([
 			opt.value = name;
 			return opt;
 		});
+
 		datalist.append(...opts);
 	}
 });

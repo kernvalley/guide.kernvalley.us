@@ -14,6 +14,7 @@ const config = {
 	stale: [
 		/* JS */
 		'/js/index.min.js',
+		'https://cdn.kernvalley.us/js/std-js/no-console.js',
 
 		/* CSS */
 		'/css/index.min.css',
@@ -47,7 +48,7 @@ const config = {
 		'https://www.google-analytics.com/analytics.js',
 		'https://www.googletagmanager.com/gtag/js',
 		'/https://i.imgur.com/',
-		/https:\/\/*\.githubusercontent\.com\/u\/*/,
+		/https:\/\/\w+\.githubusercontent\.com\/u\/*/,
 	],
 	allowedFresh: [
 		'https://api.github.com/users/',

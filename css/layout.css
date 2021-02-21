@@ -35,6 +35,19 @@ body > button.btn[is="share-button"] {
 	font-size: 1.5rem;
 }
 
+.business-listing [itemprop="image"] {
+	width: auto;
+	max-width: auto;
+	height: 280px;
+	object-fit: contain;
+	object-position: center;
+	border-radius: 6px;
+}
+
+.business-listing .contact-links {
+	line-height: 1.4;
+}
+
 #search-btn {
 	bottom: 1rem;
 	left: 1rem;
