@@ -32,6 +32,15 @@ article p:first-letter {
 	gap: 12px;
 }
 
+.category-link {
+	text-decoration: 0px transparent none;
+}
+
+.category-description {
+	border: none;
+	padding: none;
+}
+
 .grid.directory {
 	grid-template-columns: repeat(auto-fill, minmax(350px, 400px));
 	gap: 8px;

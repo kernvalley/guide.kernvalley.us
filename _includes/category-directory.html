@@ -1,13 +1,13 @@
 <section id="page-list" class="flex row wrap space-evenly">
 	{% for dir in site.pages %}{% if dir.index and dir.url != page.url %}
-	  <a href="{{ dir.url }}" class="card shadow inline-block center" data-tags="{{ dir.tags | join: ', ' | escape }}">
+	  <a href="{{ dir.url }}" class="card shadow inline-block center category-link" data-tags="{{ dir.tags | join: ', ' | escape }}">
 		{% if dir.icon %}
 			{% include common/icon.html icon=dir.icon height="64" width="64" fill=site.data.app.theme.color class="directory-icon" %}
 		{% else %}
 			{% include common/icon.html icon='business-icon' height="64" width="64" fill=site.data.app.theme.color class="directory-icon" %}
 		{% endif %}
-		<h3>{{ dir.title }}</h3>
-		<blockquote>{{ dir.description }}</blockquote>
+		<h3 class="color-accent category-label">{{ dir.title }}</h3>
+		<blockquote class="category-description">{{ dir.description }}</blockquote>
 	  </a>
 	{% endif %}{% endfor %}
 </section>
