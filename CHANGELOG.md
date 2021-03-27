@@ -17,3 +17,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Misc. layout updates
 - Handle Organization addresses, business hours, etc
 - Scroll to first result on search
+- Update to use new `<install-prompt>` element

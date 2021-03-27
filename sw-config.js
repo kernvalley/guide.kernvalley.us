@@ -21,13 +21,13 @@ const config = {
 		'https://cdn.kernvalley.us/components/toast-message.css',
 		'https://cdn.kernvalley.us/components/share-to-button/share-to-button.css',
 		'https://cdn.kernvalley.us/components/github/user.css',
-		'https://cdn.kernvalley.us/components/pwa/prompt.css',
+		'https://cdn.kernvalley.us/components/install/prompt.css',
 
 		/* `customElements` templates */
 		'https://cdn.kernvalley.us/components/toast-message.html',
 		'https://cdn.kernvalley.us/components/share-to-button/share-to-button.html',
 		'https://cdn.kernvalley.us/components/github/user.html',
-		'https://cdn.kernvalley.us/components/pwa/prompt.html',
+		'https://cdn.kernvalley.us/components/install/prompt.html',
 
 		/* Images & Icons */
 		'/img/icons.svg',
@@ -37,9 +37,10 @@ const config = {
 		'/img/icon-32.png',
 		'/img/favicon.svg',
 		'https://cdn.kernvalley.us/img/raster/missing-image.png',
+		'https://cdn.kernvalley.us/img/logos/instagram.svg',
 		'https://cdn.kernvalley.us/img/keep-kern-clean.svg',
 		'https://cdn.kernvalley.us/img/logos/play-badge.svg',
-		'https://cdn.kernvalley.us/img/logos/instagram.svg',
+		'https://cdn.kernvalley.us/img/logos/pwa-badge.svg',
 
 		/* Fonts */
 		'https://cdn.kernvalley.us/fonts/roboto.woff2',
@@ -49,6 +50,8 @@ const config = {
 		'https://www.googletagmanager.com/gtag/js',
 		'/https://i.imgur.com/',
 		/https:\/\/\w+\.githubusercontent\.com\/u\/*/,
+		/\.(jpg|png|webp|svg)$/,
+		/\.(html|css|js|json)$/,
 	],
 	allowedFresh: [
 		'https://api.github.com/users/',

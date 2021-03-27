@@ -3,6 +3,11 @@
 	lang="{{ site.lang | default: 'en' }}"
 	dir="{{ site.dir | default: 'ltr' }}"
 	class="no-js scroll-smooth background-primary color-default font-main border-box"
+	{% if site.service_worker %}
+		data-service-worker="{{ site.service_worker }}"
+		data-reload-on-update=""
+		data-scope="{{ site.sw_scope | default: '/' }}"
+	{% endif %}
 	{% if page.ads %}data-ad-sense-id="{{ site.ad-sense }}"{% endif %}
 	{% if page.pageLevelAds %}data-page-level-ads="{{ page.pageLevelAds }}"{% endif %}
 	data-layout="{{ page.data-layout | default: layout.data-layout | default: layout.name }}"

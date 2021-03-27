@@ -8,6 +8,18 @@
   type: text/css
   crossOrigin: anonymous
   referrerPolicy: no-referrer
+- href: https://cdn.kernvalley.us/components/install/prompt.html
+  as: fetch
+  type: text/html
+  crossOrigin: anonymous
+  referrerPolicy: no-referrer
+  importance: low
+- href: https://cdn.kernvalley.us/components/install/prompt.css
+  as: style
+  type: text/css
+  crossOrigin: anonymous
+  referrerPolicy: no-referrer
+  importance: low
 - href: /img/neon.svg
   as: image
   type: image/svg+xml

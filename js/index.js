@@ -5,7 +5,7 @@ import 'https://cdn.kernvalley.us/components/share-button.js';
 import 'https://cdn.kernvalley.us/components/share-to-button/share-to-button.js';
 import 'https://cdn.kernvalley.us/components/github/user.js';
 import 'https://cdn.kernvalley.us/components/current-year.js';
-import 'https://cdn.kernvalley.us/components/pwa/install.js';
+import 'https://cdn.kernvalley.us/components/install/prompt.js';
 import 'https://cdn.kernvalley.us/components/ad/block.js';
 import 'https://cdn.kernvalley.us/components/app/list-button.js';
 import 'https://cdn.kernvalley.us/components/app/stores.js';
@@ -14,6 +14,7 @@ import { $, ready } from 'https://cdn.kernvalley.us/js/std-js/functions.js';
 import { init } from 'https://cdn.kernvalley.us/js/std-js/data-handlers.js';
 import { importGa, externalHandler, telHandler, mailtoHandler } from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
 import { GA } from './consts.js';
+import { installPrompt } from './functions.js';
 
 $(':root').css({'--viewport-height': `${window.innerHeight}px`});
 
@@ -58,6 +59,10 @@ Promise.allSettled([
 	ready(),
 ]).then(() => {
 	init().catch(console.error);
+	customElements.whenDefined('install-prompt').then(() => {
+		$('#install-btn').click(() => installPrompt().then(console.log, console.error))
+			.then($btns => $btns.unhide());
+	});
 
 	$('#searchForm').on({
 		submit: async event => {
