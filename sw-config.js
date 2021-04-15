@@ -36,6 +36,7 @@ const config = {
 		'/img/icon-192.png',
 		'/img/icon-32.png',
 		'/img/favicon.svg',
+		'/favicon.ico',
 		'https://cdn.kernvalley.us/img/raster/missing-image.png',
 		'https://cdn.kernvalley.us/img/logos/instagram.svg',
 		'https://cdn.kernvalley.us/img/keep-kern-clean.svg',
