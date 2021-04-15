@@ -6,6 +6,10 @@
 	overflow: auto;
 }
 
+#main :target {
+	scroll-margin-top: calc(var(--nav-height, 4rem) + 10px);
+}
+
 #main .categories-section .directory-label {
 	padding: 18px 4rem;
 	font-size: 20px;
