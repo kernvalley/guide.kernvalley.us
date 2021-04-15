@@ -2,7 +2,7 @@
 	font-size: 1.2em;
 	gap: 18px;
 	grid-area: nav;
-	max-height: calc(100vh - var(--nav-height, 4rem));
+	max-height: var(--nav-height, 4rem);
 	overflow: auto;
 }
 
