@@ -52,9 +52,9 @@ const config = {
 		'/https://i.imgur.com/',
 		/https:\/\/\w+\.githubusercontent\.com\/u\/*/,
 		/\.(jpg|png|webp|svg)$/,
-		/\.(html|css|js|json)$/,
 	],
 	allowedFresh: [
 		'https://api.github.com/users/',
+		/\.(html|css|js|json)$/,
 	]
 };
