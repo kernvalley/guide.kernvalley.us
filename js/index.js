@@ -10,19 +10,11 @@ import 'https://cdn.kernvalley.us/components/ad/block.js';
 import 'https://cdn.kernvalley.us/components/app/list-button.js';
 import 'https://cdn.kernvalley.us/components/app/stores.js';
 import 'https://cdn.kernvalley.us/components/business-hours.js';
-import { ready, loaded, query, on, css, toggleClass, each, map } from 'https://cdn.kernvalley.us/js/std-js/dom.js';
-import { debounce } from 'https://cdn.kernvalley.us/js/std-js/events.js';
+import { ready, loaded, query, on, toggleClass, each, map } from 'https://cdn.kernvalley.us/js/std-js/dom.js';
 import { init } from 'https://cdn.kernvalley.us/js/std-js/data-handlers.js';
 import { importGa, externalHandler, telHandler, mailtoHandler } from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
 import { GA } from './consts.js';
 import { installPrompt } from './functions.js';
-
-css([document.documentElement], { '--viewport-height': `${window.innerHeight}px` });
-
-on([window], {
-	resize: () => debounce(() => css([document.documentElement], { '--viewport-height': `${window.innerHeight}px` })),
-	scroll: ({ scrollY }) => css('#header', { 'backgroound-position-y': `${-0.5 * scrollY}px` }),
-}, { passive: true });
 
 toggleClass([document.documentElement], {
 	'no-dialog': document.createElement('dialog') instanceof HTMLUnknownElement,
