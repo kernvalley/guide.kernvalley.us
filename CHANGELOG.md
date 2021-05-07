@@ -13,7 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.0.1] 2021-15-07
+
 ### Changed
+- Replace use of `esQuery` with functions from DOM module
 - Misc. layout updates
 - Handle Organization addresses, business hours, etc
 - Scroll to first result on search
