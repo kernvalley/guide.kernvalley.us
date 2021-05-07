@@ -10,27 +10,21 @@ import 'https://cdn.kernvalley.us/components/ad/block.js';
 import 'https://cdn.kernvalley.us/components/app/list-button.js';
 import 'https://cdn.kernvalley.us/components/app/stores.js';
 import 'https://cdn.kernvalley.us/components/business-hours.js';
-import { $, ready } from 'https://cdn.kernvalley.us/js/std-js/functions.js';
+import { ready, loaded, query, on, css, toggleClass, each, map } from 'https://cdn.kernvalley.us/js/std-js/dom.js';
+import { debounce } from 'https://cdn.kernvalley.us/js/std-js/events.js';
 import { init } from 'https://cdn.kernvalley.us/js/std-js/data-handlers.js';
 import { importGa, externalHandler, telHandler, mailtoHandler } from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
 import { GA } from './consts.js';
 import { installPrompt } from './functions.js';
 
-$(':root').css({'--viewport-height': `${window.innerHeight}px`});
+css([document.documentElement], { '--viewport-height': `${window.innerHeight}px` });
 
-requestIdleCallback(() => {
-	$(window).debounce('resize', () => $(':root').css({'--viewport-height': `${window.innerHeight}px`}));
+on([window], {
+	resize: () => debounce(() => css([document.documentElement], { '--viewport-height': `${window.innerHeight}px` })),
+	scroll: ({ scrollY }) => css('#header', { 'backgroound-position-y': `${-0.5 * scrollY}px` }),
+}, { passive: true });
 
-	$(window).on('scroll', () => {
-		requestAnimationFrame(() => {
-			$('#header').css({
-				'background-position-y': `${-0.5 * scrollY}px`,
-			});
-		});
-	}, { passive: true });
-});
-
-$(document.documentElement).toggleClass({
+toggleClass([document.documentElement], {
 	'no-dialog': document.createElement('dialog') instanceof HTMLUnknownElement,
 	'no-details': document.createElement('details') instanceof HTMLUnknownElement,
 	'js': true,
@@ -38,41 +32,40 @@ $(document.documentElement).toggleClass({
 });
 
 if (typeof GA === 'string' && GA.length !== 0) {
-	requestIdleCallback(() => {
-		importGa(GA).then(async ({ ga, hasGa }) => {
+	loaded().then(() => {
+		requestIdleCallback(async () => {
+			const { ga, hasGa } = await importGa(GA);
+
 			if (hasGa()) {
 				ga('create', GA, 'auto');
 				ga('set', 'transport', 'beacon');
 				ga('send', 'pageview');
 
-				await ready();
-
-				$('a[rel~="external"]').click(externalHandler, { passive: true, capture: true });
-				$('a[href^="tel:"]').click(telHandler, { passive: true, capture: true });
-				$('a[href^="mailto:"]').click(mailtoHandler, { passive: true, capture: true });
+				on('a[rel~="external"]', 'click', externalHandler, { passive: true, capture: true });
+				on('a[href^="tel:"]', 'click', telHandler, { passive: true, capture: true });
+				on('a[href^="mailto:"]', 'click', mailtoHandler, { passive: true, capture: true });
 			}
 		});
 	});
 }
 
-Promise.allSettled([
-	ready(),
-]).then(() => {
-	init().catch(console.error);
+ready().then(() => {
+	init();
+
 	customElements.whenDefined('install-prompt').then(() => {
-		$('#install-btn').click(() => installPrompt().then(console.log, console.error))
-			.then($btns => $btns.unhide());
+		on('#install-btn', 'click', () => installPrompt()).forEach(btn => btn.hidden = false);
 	});
 
-	$('#searchForm').on({
+	on('#searchForm', {
 		submit: async event => {
 			event.preventDefault();
 			const data = new FormData(event.target);
 			const name = data.get('name').toLowerCase();
 
 			if (Element.prototype.animate instanceof Function) {
-				await $('#main .business-listing[title]').map(el => {
+				await Promise.all(map('#main .business-listing[title]', el => {
 					const matches = el.title.toLowerCase().includes(name);
+
 					if (matches && el.hidden) {
 						const anim = el.animate([{
 							transform: 'scale(0.1)',
@@ -101,9 +94,9 @@ Promise.allSettled([
 							fill: 'forwards',
 						}).finished.then(() => el.hidden = true);
 					}
-				});
+				}));
 			} else {
-				$('#main .business-listing[title]').each(el => {
+				each('#main .business-listing[title]', el => {
 					el.hidden = ! el.title.toLowerCase().includes(name);
 				});
 				return Promise.resolve();
@@ -112,6 +105,15 @@ Promise.allSettled([
 			const matched = document.querySelector('#main .business-listing:not([hidden])');
 
 			if (matched instanceof HTMLElement) {
+				// @TODO: Update page title with place title
+				// @TODO: Update URL hash to be place id
+				// if (matched.id !== '') {
+				// 	const url = new URL(location.href);
+				// 	url.hash = `#${matched.id}`;
+				// 	location.hash = url.hash;
+				// 	history.replaceState(history.state, document.title, url.href);
+				// }
+
 				requestAnimationFrame(() => {
 					matched.scrollIntoView({ behavior: 'smooth', block: 'end' });
 				});
@@ -119,7 +121,7 @@ Promise.allSettled([
 		},
 		reset: () => {
 			if (Element.prototype.animate instanceof Function) {
-				$('#main .business-listing[hidden]').each(el => {
+				each('#main .business-listing[hidden]', el => {
 					el.animate([{
 						transform: 'scale(0.1)',
 						opacity: 0,
@@ -135,7 +137,7 @@ Promise.allSettled([
 					el.hidden = false;
 				});
 			} else {
-				$('#main .business-listing').unhide();
+				each('#main .business-listing', el => el.hidden = false);
 			}
 
 			document.getElementById('main').scrollIntoView({ behavior: 'smooth' });
@@ -145,7 +147,7 @@ Promise.allSettled([
 	const datalist = document.getElementById('business-list');
 
 	if (datalist instanceof HTMLElement) {
-		const businesses = Array.from(document.querySelectorAll('.business-listing[title]'));
+		const businesses = query('.business-listing[title]');
 		const names = Array.from(new Set(businesses.map(({ title }) => title)));
 		const opts = names.map(name => {
 			const opt = document.createElement('option');
