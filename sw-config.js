@@ -22,12 +22,14 @@ const config = {
 		'https://cdn.kernvalley.us/components/share-to-button/share-to-button.css',
 		'https://cdn.kernvalley.us/components/github/user.css',
 		'https://cdn.kernvalley.us/components/install/prompt.css',
+		'https://cdn.kernvalley.us/components/notification/html-notification.css',
 
 		/* `customElements` templates */
 		'https://cdn.kernvalley.us/components/toast-message.html',
 		'https://cdn.kernvalley.us/components/share-to-button/share-to-button.html',
 		'https://cdn.kernvalley.us/components/github/user.html',
 		'https://cdn.kernvalley.us/components/install/prompt.html',
+		'https://cdn.kernvalley.us/components/notification/html-notification.html',
 
 		/* Images & Icons */
 		'/img/icons.svg',
