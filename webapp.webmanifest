@@ -1,0 +1,4 @@
+---
+layout: null
+---
+{% include common/webapp.webmanifest app=site.data.app %}

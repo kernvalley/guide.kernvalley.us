@@ -1,5 +1,6 @@
 name: Kern Valley Business Guide
 shortName: KRV Guide
+startUrl: /?utm_source=pwa&utm_medium=pwa
 version: 1.0.1
 lang: en
 dir: ltr
@@ -49,7 +50,7 @@ screenshots:
 # https://web.dev/app-shortcuts/
 shortcuts:
   - name: Dining
-    url: /dining
+    url: /dining?utm_source=shortcut&utm_medium=pwa
     description: Dining Page on KRV Guide
     icons:
       - src: /img/shortcuts/restaurant-192.png
@@ -59,7 +60,7 @@ shortcuts:
         type: image/png
         sizes: 32x32
   - name: Stores
-    url: /stores
+    url: /stores?utm_source=shortcut&utm_medium=pwa
     description: Grocery and other Stores Page on KRV Guide
     icons:
       - src: /img/shortcuts/shopping-192.png
@@ -69,7 +70,7 @@ shortcuts:
         type: image/png
         sizes: 32x32
   - name: Other
-    url: /other
+    url: /other?utm_source=shortcut&utm_medium=pwa
     description: Misc. listings Page on KRV Guide
     icons:
       - src: /img/shortcuts/business-192.png
@@ -81,7 +82,7 @@ shortcuts:
 iarc_rating_id: 6b80d8b3-64c2-42f8-8727-f66e3e1e3ce5
 related_applications:
   - platform: webapp
-    url: /manifest.json
+    url: /webapp.webmanifest
   - platform: play
     id: "us.kernvalley.guide.twa"
   #   url: "#"

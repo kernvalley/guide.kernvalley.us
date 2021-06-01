@@ -18,6 +18,11 @@
   Link: </img/icons.svg>; rel=preload; as=image; referrerpolicy=no-referrer;
   Content-Security-Policy: default-src 'self'; img-src *; script-src 'self' cdn.kernvalley.us unpkg.com/ www.google-analytics.com www.googletagmanager.com cdn.polyfill.io/v3/polyfill.min.js; style-src 'self' cdn.kernvalley.us unpkg.com/; connect-src 'self' cdn.kernvalley.us apps.kernvalley.us/apps.json api.kernvalley.us api.github.com/users/ contact.kernvalley.us/api/ api.openweathermap.org/data/2.5/ www.google-analytics.com/ www.googletagmanager.com/gtag/; font-src cdn.kernvalley.us; media-src *; frame-src www.youtube-nocookie.com; form-action 'self'; manifest-src 'self'; worker-src 'self'; reflected-xss block; upgrade-insecure-requests; block-all-mixed-content; disown-opener;
 
+/webapp.webmanifest
+  Content-Type: application/manifest+json
+  Content-Security-Policy: default-src 'none';
+  Link: no-op
+
 /favicon.ico
   Referrer-Policy: no-referrer
   Content-Security-Policy: default-src 'none';
