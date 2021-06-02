@@ -14,7 +14,6 @@ const config = {
 	stale: [
 		/* JS */
 		'/js/index.min.js',
-		'https://cdn.kernvalley.us/js/std-js/no-console.js',
 
 		/* CSS */
 		'/css/index.min.css',
@@ -49,13 +48,13 @@ const config = {
 		'https://cdn.kernvalley.us/fonts/roboto.woff2',
 	].map(path => new URL(path, location.origin).href),
 	allowed: [
-		'https://www.google-analytics.com/analytics.js',
-		'https://www.googletagmanager.com/gtag/js',
 		'/https://i.imgur.com/',
 		/https:\/\/\w+\.githubusercontent\.com\/u\/*/,
-		/\.(jpg|png|webp|svg)$/,
+		/\.(jpg|png|webp|svg|gif)$/,
 	],
 	allowedFresh: [
+		'https://www.google-analytics.com/analytics.js',
+		'https://www.googletagmanager.com/gtag/js',
 		'https://api.github.com/users/',
 		/\.(html|css|js|json)$/,
 	]

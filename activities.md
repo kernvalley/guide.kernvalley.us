@@ -3,6 +3,7 @@ title: Activities
 layout: business-directory
 permalink: /activities
 index: true
+icon: activities-icon
 categories:
   - landmarks
   - activities
