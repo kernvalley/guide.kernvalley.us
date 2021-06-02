@@ -5,6 +5,7 @@ permalink: /activities
 index: true
 icon: activities-icon
 categories:
+  - landmarks
   - activities
   - campgrounds
 pinned: true
@@ -22,4 +23,5 @@ tags:
   - rafting
   - campgrounds
   - camping
+  - landmarks
 ---
