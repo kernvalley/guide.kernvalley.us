@@ -69,6 +69,16 @@ shortcuts:
       - src: /img/shortcuts/shopping-32.png
         type: image/png
         sizes: 32x32
+  - name: Activities
+    url: /activities?utm_source=shortcut&utm_medium=pwa
+    description: List of recreational activities in the Kern River Valley with extended contact info
+    icons:
+      - src: /img/shortcuts/activities-192.png
+        type: image/png
+        sizes: 192x192
+      - src: /img/shortcuts/activities-32.png
+        type: image/png
+        sizes: 32x32
   - name: Other
     url: /other?utm_source=shortcut&utm_medium=pwa
     description: Misc. listings Page on KRV Guide
@@ -91,13 +101,14 @@ related_applications:
   # - platform: windows
   #   url: "#"
 features:
-  - List all available businesses in the Kern River Valley by category
+  - List businesses in the Kern River Valley by category
   - Search for business by name
   - Find phone numbers, addresses, websites, business hours, and more
   - Share contact info to other apps
   - Offline functionality
 # https://github.com/w3c/manifest/wiki/Categories
 categories:
+  - travel
   - business
   - productivity
   - utilities
