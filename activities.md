@@ -4,6 +4,7 @@ layout: business-directory
 permalink: /activities
 index: true
 categories:
+  - landmarks
   - activities
   - campgrounds
 pinned: true
@@ -21,4 +22,5 @@ tags:
   - rafting
   - campgrounds
   - camping
+  - landmarks
 ---
