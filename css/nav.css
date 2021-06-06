@@ -1,6 +1,6 @@
 #nav {
 	font-size: 1.2em;
-	gap: 6px;
+	gap: 1em;
 	grid-area: nav;
 	max-height: var(--nav-height, 4rem);
 	overflow: auto;
