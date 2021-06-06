@@ -1,6 +1,6 @@
 name: Kern Valley Business Guide
 shortName: KRV Guide
-startUrl: /?utm_source=pwa&utm_medium=pwa
+startUrl: /?utm_source=pwa&utm_medium=pwa&utm_campaign=pwa
 version: 1.0.1
 lang: en
 dir: ltr
@@ -50,7 +50,7 @@ screenshots:
 # https://web.dev/app-shortcuts/
 shortcuts:
   - name: Dining
-    url: /dining?utm_source=shortcut&utm_medium=pwa
+    url: /dining?utm_source=shortcut&utm_medium=pwa&utm_campaign=pwa&utm_content=dining
     description: Dining Page on KRV Guide
     icons:
       - src: /img/shortcuts/restaurant-192.png
@@ -60,7 +60,7 @@ shortcuts:
         type: image/png
         sizes: 32x32
   - name: Stores
-    url: /stores?utm_source=shortcut&utm_medium=pwa
+    url: /stores?utm_source=shortcut&utm_medium=pwa&utm_campaign=pwa&utm_content=stores
     description: Grocery and other Stores Page on KRV Guide
     icons:
       - src: /img/shortcuts/shopping-192.png
@@ -70,7 +70,7 @@ shortcuts:
         type: image/png
         sizes: 32x32
   - name: Activities
-    url: /activities?utm_source=shortcut&utm_medium=pwa
+    url: /activities?utm_source=shortcut&utm_medium=pwa&utm_campaign=pwa&utm_content=activities
     description: List of recreational activities in the Kern River Valley with extended contact info
     icons:
       - src: /img/shortcuts/activities-192.png
@@ -80,7 +80,7 @@ shortcuts:
         type: image/png
         sizes: 32x32
   - name: Other
-    url: /other?utm_source=shortcut&utm_medium=pwa
+    url: /othe?utm_source=shortcut&utm_medium=pwa&utm_campaign=pwa&utm_content=other
     description: Misc. listings Page on KRV Guide
     icons:
       - src: /img/shortcuts/business-192.png
