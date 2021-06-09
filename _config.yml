@@ -25,6 +25,10 @@ keywords:
   - businesses
   - kern valley
   - kern river valley
+thumbnail:
+  url: https://i.imgur.com/bWudF1el.jpg
+  width: 640
+  height: 315
 repository:
   username: kernvalley
   project: guide.kernvalley.us
