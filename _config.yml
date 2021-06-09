@@ -1,6 +1,7 @@
 ---
 author: Chris Zuber
 title: Kern Valley Business Guide
+name: Kern Valley Business Guide
 url: https://guide.kernvalley.us
 markdown: kramdown
 version: 1.0.0
@@ -25,6 +26,10 @@ keywords:
   - businesses
   - kern valley
   - kern river valley
+thumbnail:
+  url: https://i.imgur.com/bWudF1el.jpg
+  width: 640
+  height: 315
 repository:
   username: kernvalley
   project: guide.kernvalley.us
