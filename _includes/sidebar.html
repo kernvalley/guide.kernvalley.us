@@ -1,4 +1,5 @@
 <aside id="sidebar" class="card shadow">
+	<krv-events></krv-events>
 	{% if page.ads %}{% for ad in page.ads %}
 		{% include common/ad.html ad=ad content="sidebar" %}
 	{% endfor %}{% endif %}

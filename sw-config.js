@@ -9,6 +9,7 @@ const config = {
 	fresh: [
 		'{{ site.pages | where: "pinned", true | map: "url" | join: "', '" }}',
 		'https://apps.kernvalley.us/apps.json',
+		'https://events.kernvalley.us/events.json',
 		'/webapp.webmanifest',
 	].map(path => new URL(path, location.origin).href),
 	stale: [
@@ -21,6 +22,7 @@ const config = {
 		'https://cdn.kernvalley.us/components/share-to-button/share-to-button.css',
 		'https://cdn.kernvalley.us/components/github/user.css',
 		'https://cdn.kernvalley.us/components/install/prompt.css',
+		'https://cdn.kernvalley.us/components/krv/events.css',
 		'https://cdn.kernvalley.us/components/notification/html-notification.css',
 
 		/* `customElements` templates */
@@ -28,6 +30,7 @@ const config = {
 		'https://cdn.kernvalley.us/components/share-to-button/share-to-button.html',
 		'https://cdn.kernvalley.us/components/github/user.html',
 		'https://cdn.kernvalley.us/components/install/prompt.html',
+		'https://cdn.kernvalley.us/components/krv/events.html',
 		'https://cdn.kernvalley.us/components/notification/html-notification.html',
 
 		/* Images & Icons */

@@ -20,3 +20,8 @@
 details.accordion[open] > :not(summary) {
 	animation: slideInDown 200ms ease-in;
 }
+
+krv-events {
+	width: 100%;
+	height: 300px;
+}
