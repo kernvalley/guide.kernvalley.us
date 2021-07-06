@@ -1,3 +1,15 @@
+- href: https://cdn.kernvalley.us/components/krv/events.html
+  as: fetch
+  type: text/html
+  importance: high
+  crossOrigin: anonymous
+  referrerPolicy: no-referrer
+- href: https://cdn.kernvalley.us/components/krv/events.css
+  as: style
+  type: text/css
+  importance: high
+  crossOrigin: anonymous
+  referrerPolicy: no-referrer
 - href: https://cdn.kernvalley.us/components/github/user.html
   as: fetch
   type: text/html
