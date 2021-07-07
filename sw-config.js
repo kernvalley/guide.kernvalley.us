@@ -53,7 +53,7 @@ const config = {
 	allowed: [
 		'/https://i.imgur.com/',
 		/https:\/\/\w+\.githubusercontent\.com\/u\/*/,
-		/\.(jpg|png|webp|svg|gif|avif)$/,
+		/\.(jpg|png|webp|svg|gif|avif|woff2|woff)$/,
 	],
 	allowedFresh: [
 		'https://www.google-analytics.com/analytics.js',
