@@ -23,5 +23,7 @@ details.accordion[open] > :not(summary) {
 
 krv-events {
 	width: 100%;
-	height: 300px;
+	min-height: 300px;
+	max-height: 70vh;
+	padding: 4px 12px;
 }
