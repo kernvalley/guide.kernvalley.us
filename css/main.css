@@ -46,6 +46,7 @@ article p:first-letter {
 
 .grid.directory {
 	grid-template-columns: repeat(auto-fill, minmax(350px, 400px));
+	grid-template-rows: masonry;
 	gap: 8px;
 	justify-content: space-evenly;
 }
