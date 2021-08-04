@@ -1,4 +1,4 @@
-name: Kern Valley Business Guide
+name: Kern Valley Guide
 shortName: KRV Guide
 startUrl: /?utm_source=pwa&utm_medium=pwa&utm_campaign=pwa
 version: 1.0.1
@@ -6,7 +6,7 @@ lang: en
 dir: ltr
 display: standalone
 orientation: any
-description: A directory of local businesses in the Kern River Valley
+description: Your virtual guide to exploring the Kern River Valley. Get the knowledge of locals at your fingertips!
 icons-file: /img/icons.svg
 theme:
   color: '#008000'

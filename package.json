@@ -2,7 +2,7 @@
   "name": "krv-guide",
   "version": "1.0.1",
   "private": true,
-  "description": "A directory of local businesses in the Kern River Valley",
+  "description": "Your virtual guide to exploring the Kern River Valley. Get the knowledge of locals at your fingertips!",
   "config": {
     "icons": "./_data/icons.csv",
     "serve": {
