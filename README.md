@@ -1,5 +1,5 @@
 # [Kern Valley Guide](https://guide.kernvalley.us)
-A directory of local businesses in the Kern River Valley
+Your virtual guide to exploring the Kern River Valley. Get the knowledge of locals at your fingertips!
 
 <!-- [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=kernvalley/guide.kernvalley.us)](https://dependabot.com) -->
 [![Node CI](https://github.com/kernvalley/guide.kernvalley.us/workflows/Node%20CI/badge.svg)](https://github.com/kernvalley/guide.kernvalley.us/actions)

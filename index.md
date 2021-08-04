@@ -3,7 +3,7 @@ layout: default
 title: Home
 pinned: true
 index: true
-description: A directory of local businesses in the Kern River Valley
+description: Your virtual guide to exploring the Kern River Valley. Get the knowledge of locals at your fingertips!
 tags:
   - kern valley
   - kern river valley

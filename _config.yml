@@ -1,7 +1,7 @@
 ---
 author: Chris Zuber
-title: Kern Valley Business Guide
-name: Kern Valley Business Guide
+title: Kern Valley Guide
+name: Kern Valley Guide
 url: https://guide.kernvalley.us
 markdown: kramdown
 version: 1.0.0
@@ -17,7 +17,7 @@ tiles-config: /browserconfig.xml
 service_worker: /service-worker.js
 og-type: website
 keep-kern-clean: true
-description: A directory of local businesses in the Kern River Valley
+description: Your virtual guide to exploring the Kern River Valley. Get the knowledge of locals at your fingertips!
 mobile-web-app-capable: true
 canonical: https://guide.kernvalley.us
 keywords:
