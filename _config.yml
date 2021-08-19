@@ -20,16 +20,16 @@ keep-kern-clean: true
 description: Your virtual guide to exploring the Kern River Valley. Get the knowledge of locals at your fingertips!
 mobile-web-app-capable: true
 canonical: https://guide.kernvalley.us
+thumbnail:
+  url: https://cdn.kernvalley.us/img/thumbnail/krv-guide.png
+  width: 1280
+  height: 720
 keywords:
   - directory
   - guide
   - businesses
   - kern valley
   - kern river valley
-thumbnail:
-  url: https://i.imgur.com/bWudF1el.jpg
-  width: 640
-  height: 315
 repository:
   username: kernvalley
   project: guide.kernvalley.us
