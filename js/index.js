@@ -11,6 +11,7 @@ import 'https://cdn.kernvalley.us/components/ad/block.js';
 import 'https://cdn.kernvalley.us/components/app/list-button.js';
 import 'https://cdn.kernvalley.us/components/app/stores.js';
 import 'https://cdn.kernvalley.us/components/business-hours.js';
+import { DAYS } from 'https://cdn.kernvalley.us/js/std-js/date-consts.js';
 import { prefersReducedMotion } from 'https://cdn.kernvalley.us/js/std-js/media-queries.js';
 import { ready, loaded, query, on, toggleClass, each, map, addClass, intersect } from 'https://cdn.kernvalley.us/js/std-js/dom.js';
 import { init } from 'https://cdn.kernvalley.us/js/std-js/data-handlers.js';
@@ -40,6 +41,19 @@ if (typeof GA === 'string' && GA.length !== 0) {
 				on('a[href^="mailto:"]', 'click', mailtoHandler, { passive: true, capture: true });
 			}
 		});
+	});
+}
+
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.ready.then(async reg => {
+		if ('periodicSync' in reg && 'permissions' in navigator) {
+			const { state } = await navigator.permissions.query({ name: 'periodic-background-sync' });
+
+			if (state === 'granted') {
+				reg.periodicSync.register('main-assets', { minInterval: 7 *  DAYS }).catch(console.error);
+				reg.periodicSync.register('pinned-pages', { minInterval: 2 * DAYS }).catch(console.error);
+			}
+		}
 	});
 }
 
