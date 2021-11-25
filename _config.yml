@@ -42,9 +42,9 @@ icons: /img/icons.svg
 # discus-identifier:
 # google-analytics:
 # ad-sense:
-# webmaster-verifications:
+webmaster-verifications:
 #   google:
-#   bing:
+  bing: 14343D3F998AB3FEE56B299A7F3E5CDB
 defaults: []
 plugins:
   - jekyll-gist
