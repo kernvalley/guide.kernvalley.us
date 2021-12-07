@@ -56,6 +56,14 @@ if ('serviceWorker' in navigator) {
 		}
 	});
 }
+if (location.pathname !== '/' && location.hash.length > 1) {
+	loaded().then(() => {
+		const target = document.getElementById(location.hash.substr(1));
+		if (target instanceof HTMLElement) {
+			target.scrollIntoView({ block: 'start', behavior: 'smooth' });
+		}
+	});
+}
 
 ready().then(() => {
 	init();
