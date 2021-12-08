@@ -2,14 +2,26 @@ source: krv-guide
 medium: web
 campaign: kv-ads
 sidebar:
-  - uuid: 267f9320-b48e-4615-99d1-a1348daa73a1
+  - "@context": https://schema.org
+    "@type": WPAdBlock
+    version: 1.0.0
+    identifier: cef968f1-865d-4575-96bf-6c6294281afc
+    label: Whiskey Flat Days App
+    image: https://i.imgur.com/8Lxv139m.png
+    layout: image
+    theme: auto
+    url: https://whiskeyflatdays.com
+    campaign: krv-ads
+    imageFit: contain
+    imagePosition: center
+  - identifier: 267f9320-b48e-4615-99d1-a1348daa73a1
     url: https://ads.kernvalley.us
     label: Kern Valley Ads
     description: Advertise on local websites throughout the Kern River Valley
     callToAction: Click here to get started!
     image: https://cdn.kernvalley.us/img/branding/ads.kernvalley.us.svg
     layout: card
-  - uuid: 87873b5a-dad1-4d07-9b17-e24747793f94
+  - identifier: 87873b5a-dad1-4d07-9b17-e24747793f94
     label: Kernville Cowork
     url: https://www.kernvillecowork.com/en
     description: "Want to work where you play?  Bring your laptop and get things done in scenic Kernville!"
