@@ -1,3 +1,12 @@
 window-controls::part(container) {
 	background-color: var(--accent-color);
 }
+
+window-controls .input {
+	height: env(titlebar-area-height, 33px);
+	width: cacl(0.5 * env(titlebar-area-width, 100%));
+	background-color: var(--color-primary);
+	color: var(--color-default);
+	border: 1px solid #dadada;
+	border-radius: 8px;
+}

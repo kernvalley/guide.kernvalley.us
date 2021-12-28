@@ -1,5 +1,7 @@
-name: Kern Valley Guide
-shortName: KRV Guide
+# name: Kern Valley Guide
+# shortName: KRV Guide
+name: Guide Test
+shortName: Guide Test
 id: KRVGuide
 startUrl: /?utm_source=pwa&utm_medium=pwa&utm_campaign=pwa
 version: 1.0.3
@@ -35,6 +37,18 @@ icons:
   - src: /img/icon-16.png
     type: image/png
     sizes: 16x16
+  - src: /img/monochrome.svg
+    type: image/svg+xml
+    sizes: 192x192
+    purpose: monochrome
+  - src: /img/monochrome-512.png
+    type: image/png
+    sizes: 512x512
+    purpose: monochrome
+  - src: /img/monochrome-192.png
+    type: image/png
+    sizes: 192x192
+    purpose: monochrome
 screenshots:
   - src: https://i.imgur.com/bWudF1eh.jpg
     sizes: 1024x504
