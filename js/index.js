@@ -11,6 +11,7 @@ import 'https://cdn.kernvalley.us/components/ad/block.js';
 import 'https://cdn.kernvalley.us/components/app/list-button.js';
 import 'https://cdn.kernvalley.us/components/app/stores.js';
 import 'https://cdn.kernvalley.us/components/business-hours.js';
+import 'https://cdn.kernvalley.us/components/window-controls.js';
 import { DAYS } from 'https://cdn.kernvalley.us/js/std-js/date-consts.js';
 import { prefersReducedMotion } from 'https://cdn.kernvalley.us/js/std-js/media-queries.js';
 import { ready, loaded, query, on, toggleClass, each, map, addClass, intersect } from 'https://cdn.kernvalley.us/js/std-js/dom.js';
@@ -94,7 +95,7 @@ ready().then(() => {
 			});
 		}
 
-		on('#searchForm', {
+		on('#searchForm, #titlebarSearch', {
 			submit: async event => {
 				event.preventDefault();
 				const data = new FormData(event.target);

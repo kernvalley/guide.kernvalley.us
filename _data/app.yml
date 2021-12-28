@@ -2,7 +2,7 @@ name: Kern Valley Guide
 shortName: KRV Guide
 id: KRVGuide
 startUrl: /?utm_source=pwa&utm_medium=pwa&utm_campaign=pwa
-version: 1.0.2
+version: 1.0.3
 lang: en
 dir: ltr
 display: standalone
@@ -91,6 +91,8 @@ shortcuts:
         type: image/png
         sizes: 32x32
 iarc_rating_id: 6b80d8b3-64c2-42f8-8727-f66e3e1e3ce5
+display_overrides:
+  - window-controls-overlay
 related_applications:
   - platform: webapp
     url: /webapp.webmanifest
