@@ -9,7 +9,7 @@ pinned-posts: 3
 recent-posts: 8
 main-itemtype: Event
 ---
-{% if page.url != '/' %}{% include window-controls.html %}{% endif %}
+{% include window-controls.html %}
 {% unless page.no-header == true %}{% include header.html %}{% endunless %}
 {% unless page.no-nav == true %}{% include common/nav.html %}{% endunless %}
 <main id="main">{{ content }}</main>

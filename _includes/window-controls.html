@@ -1,10 +1,13 @@
 <window-controls>
 	<img src="/img/favicon.svg" alt="logo" height="28" width="28" loading="lazy" referrerpolicy="no-referrer" slot="titlebar" hidden="" />
-	<form id="titlebarSearch" slot="titlebar" hidden="">
-		<label for="title-search">Find in Page</label>
-		<input type="search" name="name" id="title-search" class="input" placeholder="Search page" list="business-list" required="" />
-		<button type="button" class="btn btn-primary" title="Search">
-			{% include common/icon.html icon="search" height="28" width="28" fill="currentColor" class="titlebar-icon" %}
-		</button>
-	</form>
+	<b slot="titlebar" hidden="">KRV&nbsp;Guide</b>
+	{% if page.url !== '/' %}
+		<form id="titlebarSearch" slot="titlebar" hidden="">
+			<label for="title-search">Find in Page</label>
+			<input type="search" name="name" id="title-search" class="input" placeholder="Search page" list="business-list" required="" />
+			<button type="button" class="btn btn-primary" title="Search">
+				{% include common/icon.html icon="search" height="28" width="28" fill="currentColor" class="titlebar-icon" %}
+			</button>
+		</form>
+	{% endif %}
 </window-controls>

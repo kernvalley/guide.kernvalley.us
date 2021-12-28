@@ -1,0 +1,3 @@
+window-controls::part(container) {
+	background-color: var(--accent-color);
+}
