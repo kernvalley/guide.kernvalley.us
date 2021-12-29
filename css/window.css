@@ -20,6 +20,11 @@ window-controls form {
 	gap: 8px;
 }
 
+window-controls > img, window-controls > b {
+	-webkit-app-region: drag;
+	app-region: drag;
+}
+
 window-controls .input {
 	height: env(titlebar-area-height, 33px);
 	margin: 0;
