@@ -7,6 +7,7 @@
 
 #main :target {
 	scroll-margin-top: calc(var(--nav-height, 4rem) + 10px);
+	scroll-margin-top: calc(var(--nav-height, 4rem) + env(titlebar-area-height) + 10px);
 }
 
 #main .categories-section .directory-label {
