@@ -105,7 +105,7 @@ shortcuts:
         type: image/png
         sizes: 32x32
 iarc_rating_id: 6b80d8b3-64c2-42f8-8727-f66e3e1e3ce5
-display_overrides:
+display_override:
   - window-controls-overlay
 related_applications:
   - platform: webapp
