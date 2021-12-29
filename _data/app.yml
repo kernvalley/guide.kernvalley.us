@@ -93,7 +93,7 @@ shortcuts:
         type: image/png
         sizes: 32x32
   - name: Other
-    url: /othe?utm_source=shortcut&utm_medium=pwa&utm_campaign=pwa&utm_content=other
+    url: /other/?utm_source=shortcut&utm_medium=pwa&utm_campaign=pwa&utm_content=other
     description: Misc. listings Page on KRV Guide
     icons:
       - src: /img/shortcuts/business-192.png
