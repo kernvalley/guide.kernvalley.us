@@ -4,6 +4,7 @@
 	grid-area: nav;
 	max-height: var(--nav-height, 4rem);
 	overflow: auto;
+	top: env(titlebar-area-height, 0);
 }
 
 #nav > .nav-btn {
