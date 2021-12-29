@@ -6,8 +6,9 @@
 
 body {
 	display: grid;
-	grid-template-areas: "nav nav nav" ". main sidebar" "footer footer footer";
-	grid-template-rows: var(--nav-height, 4rem) auto auto;
+	grid-template-areas: ". . ." "nav nav nav" ". main sidebar" "footer footer footer";
+	grid-template-rows: 0 var(--nav-height, 4rem) auto auto;
+	grid-template-rows: env(titelbar-area-height, 0) var(--nav-height, 4rem) auto auto;
 	grid-template-columns: 12px 1fr 400px;
 	gap: 8px;
 }

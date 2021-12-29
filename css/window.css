@@ -1,5 +1,6 @@
 window-controls::part(container) {
 	background-color: var(--accent-color);
+	align-items: center;
 }
 
 window-controls form {
