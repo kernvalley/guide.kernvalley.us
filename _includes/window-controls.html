@@ -4,7 +4,7 @@
 	{% if page.url != '/' %}
 		<form id="titlebarSearch" slot="titlebar" hidden="">
 			<label for="title-search">Find in Page</label>
-			<input type="search" name="name" id="title-search" class="input" placeholder="Search page" list="business-list" required="" />
+			<input type="search" name="name" id="title-search" class="input" placeholder="Search page" list="business-list" autocomplete="off" required="" />
 			<button type="submit" class="btn btn-primary" title="Search">
 				{% include common/icon.html icon="search" height="28" width="28" fill="currentColor" class="titlebar-icon" %}
 			</button>

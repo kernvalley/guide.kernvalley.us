@@ -18,8 +18,8 @@ window-controls .input {
 	height: env(titlebar-area-height, 33px);
 	margin: 0;
 	width: cacl(0.5 * env(titlebar-area-width, 100%));
-	background-color: var(--color-primary);
-	color: var(--color-default);
+	background-color: var(--primary-color);
+	color: var(--default-color);
 	border: 1px solid #dadada;
 	border-radius: 8px;
 }
