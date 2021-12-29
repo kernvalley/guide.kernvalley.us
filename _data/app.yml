@@ -1,7 +1,5 @@
-# name: Kern Valley Guide
-# shortName: KRV Guide
-name: Guide Test
-shortName: Guide Test
+name: Kern Valley Guide
+shortName: KRV Guide
 id: KRVGuide
 startUrl: /?utm_source=pwa&utm_medium=pwa&utm_campaign=pwa
 version: 1.0.3

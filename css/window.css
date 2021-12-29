@@ -1,3 +1,8 @@
+window-controls {
+	background-color: var(--accent-color);
+	z-index: 5;
+}
+
 window-controls::part(container) {
 	background-color: var(--accent-color);
 	align-items: center;
@@ -7,6 +12,7 @@ window-controls form {
 	display: inline-flex;
 	height: env(titelbar-area-height, 33px);
 	width: 100%;
+	padding-left: 8px;
 	contain: strict;
 	flex-direction: row;
 	flex-wrap: no-wrap;
