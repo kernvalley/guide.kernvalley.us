@@ -2,8 +2,20 @@ window-controls::part(container) {
 	background-color: var(--accent-color);
 }
 
+window-controls form {
+	display: inline-flex;
+	height: env(titelbar-area-height, 33px);
+	width: 100%;
+	contain: strict;
+	flex-direction: row;
+	flex-wrap: no-wrap;
+	align-items: center;
+	gap: 8px;
+}
+
 window-controls .input {
 	height: env(titlebar-area-height, 33px);
+	margin: 0;
 	width: cacl(0.5 * env(titlebar-area-width, 100%));
 	background-color: var(--color-primary);
 	color: var(--color-default);
