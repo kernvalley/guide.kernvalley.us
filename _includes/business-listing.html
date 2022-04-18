@@ -20,7 +20,11 @@
 			{% include common/telephone.html telephone=include.place.telephone %}<br />
 		{% endif %}
 		{% if include.place.url %}
-			{% include common/url.html url=include.place.url params=site.data.utm %}<br />
+			{% if include.place.url contains "?recid=" %}
+				{% include common/url.html url=include.place.url %}<br />
+			{% else %}
+				{% include common/url.html url=include.place.url params=site.data.utm %}<br />
+			{% endif %}
 		{% endif %}
 		{% if include.place.email %}
 			{% include common/email.html email=include.place.email %}<br />
