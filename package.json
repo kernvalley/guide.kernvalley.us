@@ -8,7 +8,7 @@
     "serve": {
       "domain": "localhost",
       "path": "./",
-      "port": 8000
+      "port": 4000
     },
     "dir": {
       "css": "css/",
@@ -39,6 +39,7 @@
     "preinstall": "npm run git:submodules",
     "postinstall": "npm run build",
     "preversion": "npm test",
+    "create:lock": "npm i --package-lock-only --ignore-scripts",
     "git:fetch": "git fetch --prune --tags",
     "git:submodules": "if [ -f '.gitmodules' ]; then git submodule update --init --recursive; fi",
     "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
@@ -67,6 +68,6 @@
   },
   "dependencies": {
     "eslint-plugin-frontmatter": "0.0.8",
-    "netlify-js-app": "^2.0.0"
+    "netlify-js-app": "^2.1.1"
   }
 }
