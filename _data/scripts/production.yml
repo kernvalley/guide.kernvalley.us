@@ -9,6 +9,10 @@
   noModule: true
   defer: true
   integrity: sha384-xyhN4T4+9VPh8uXl6uWjGzsqwNXN9C2tla8b6zSrSqYlMFUoeCdoxiEJU0js+GNE
+- src: https://cdn.kernvalley.us/js/shims.min.js
+  crossOrigin: anonymous
+  referrerPolicy: no-referrer
+  defer: true
 - src: /js/index.min.js
   referrerPolicy: no-referrer
   defer: true

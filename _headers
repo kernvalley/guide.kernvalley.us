@@ -3,16 +3,20 @@
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: no-referrer
+  Link: <https://cdn.kernvalley.us/js/shims.min.js>; rel=preload; as=script; crossorigin=anonymous; referrerpolicy=no-referrer;
+  Link: <https://cdn.kernvalley.us/js/std-js/harden.js>; rel=preload; as=script; crossorigin=anonymous; referrerpolicy=no-referrer;
   Link: </js/index.min.js>; rel=preload; as=script; referrerpolicy=no-referrer;
   Link: </css/index.min.css>; rel=preload; as=style; referrerpolicy=no-referrer;
   Link: </img/icons.svg>; rel=preload; as=image; referrerpolicy=no-referrer;
-  Content-Security-Policy: default-src 'self'; img-src *; script-src 'self' cdn.kernvalley.us unpkg.com/ www.google-analytics.com www.googletagmanager.com cdn.polyfill.io/v3/polyfill.min.js; style-src 'self' cdn.kernvalley.us unpkg.com/; connect-src 'self' cdn.kernvalley.us events.kernvalley.us/events.json api.kernvalley.us apps.kernvalley.us/apps.json contact.kernvalley.us/api/ api.github.com/users/ api.openweathermap.org/data/2.5/ www.google-analytics.com/ www.googletagmanager.com/gtag/ baconipsum.com/api/; font-src cdn.kernvalley.us; media-src *; frame-src www.youtube-nocookie.com; form-action 'self'; manifest-src 'self'; worker-src 'self' *.netlify.live/service-worker.js cdn.kernvalley.us/service-worker.js; reflected-xss block; upgrade-insecure-requests; block-all-mixed-content; disown-opener;
+  Content-Security-Policy: default-src 'self'; img-src *; script-src 'self' cdn.kernvalley.us unpkg.com/ www.google-analytics.com www.googletagmanager.com cdn.polyfill.io/v3/polyfill.min.js; style-src 'self' cdn.kernvalley.us unpkg.com/; connect-src 'self' cdn.kernvalley.us events.kernvalley.us/events.json api.kernvalley.us apps.kernvalley.us/apps.json contact.kernvalley.us/api/ api.github.com/users/ api.openweathermap.org/data/2.5/ www.google-analytics.com/ www.googletagmanager.com/gtag/ ads.kernvalley.us/api/; font-src cdn.kernvalley.us; media-src *; frame-src www.youtube-nocookie.com; form-action 'self'; manifest-src 'self'; worker-src 'self' *.netlify.live/service-worker.js cdn.kernvalley.us/service-worker.js; reflected-xss block; upgrade-insecure-requests; block-all-mixed-content; disown-opener;
 
 /:placeholder
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: no-referrer
+  Link: <https://cdn.kernvalley.us/js/shims.min.js>; rel=preload; as=script; crossorigin=anonymous; referrerpolicy=no-referrer;
+  Link: <https://cdn.kernvalley.us/js/std-js/harden.js>; rel=preload; as=script; crossorigin=anonymous; referrerpolicy=no-referrer;
   Link: </js/index.min.js>; rel=preload; as=script; referrerpolicy=no-referrer;
   Link: </css/index.min.css>; rel=preload; as=style; referrerpolicy=no-referrer;
   Link: </img/icons.svg>; rel=preload; as=image; referrerpolicy=no-referrer;
@@ -36,7 +40,7 @@
 /service-worker.js
   Referrer-Policy: no-referrer
   Content-Security-Policy: default-src 'self'; connect-src *; script-src 'self' *.netlify.live/service-worker.js *.netlify.app/service-worker.js cdn.kernvalley.us/service-worker.js;
-  Link: </cdn.kernvalley.us/service-worker.js>; rel=preload; as=script
+  Link: <https://cdn.kernvalley.us/service-worker.js>; rel=preload; as=script
   Link: </sw-config.js>; rel=preload; as=script
 
 /*

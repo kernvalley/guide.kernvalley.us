@@ -40,6 +40,7 @@ const config = {
 		'https://cdn.kernvalley.us/components/github/user.css',
 		'https://cdn.kernvalley.us/components/install/prompt.css',
 		'https://cdn.kernvalley.us/components/krv/events.css',
+		'https://cdn.kernvalley.us/components/krv/ad.css',
 		'https://cdn.kernvalley.us/components/notification/html-notification.css',
 
 		/* `customElements` templates */
