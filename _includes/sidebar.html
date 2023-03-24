@@ -1,9 +1,9 @@
 <aside id="sidebar" class="card shadow">
 	<krv-events class="sidebar-section" source="{{ site.data.utm.utm_source }}" medium="{{ site.data.utm.utm_medium | default: 'referral' }}"></krv-events>
 	{% if page.ads %}{% for ad in page.ads %}
-		{% include common/ad.html ad=ad content="sidebar" %}
+		{% include common/krv-ad.html ad=ad content="sidebar" %}
 	{% endfor %}{% endif %}
 	{% for ad in site.data.ads.sidebar %}
-		{% include common/ad.html ad=ad content="sidebar" %}
+		{% include common/krv-ad.html ad=ad content="sidebar" %}
 	{% endfor %}
 </aside>
