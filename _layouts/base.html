@@ -11,7 +11,10 @@
 	{% if page.ads %}data-ad-sense-id="{{ site.ad-sense }}"{% endif %}
 	{% if page.pageLevelAds %}data-page-level-ads="{{ page.pageLevelAds }}"{% endif %}
 	data-layout="{{ page.data-layout | default: layout.data-layout | default: layout.name }}"
-	data-theme="{{ page.theme | default: layout.theme }}"
+	data-theme="{{ page.theme | default: layout.theme }}"{% if page.policies.trusted %}
+	data-trusted-policies="{{ page.policies.trusted | join: ' ' }}"{% elsif layout.policies.trusted %}
+	data-trusted-policies="{{ layout.policies.trusted | join: ' ' }}"{% elsif site.data.policies.trusted %}
+	data-trusted-policies="{{ site.data.policies.trusted | join: ' ' }}"{% endif %}
 	itemtype="{{ page.itemtype | default: layout.itemtype | default: 'http://schema.org/WebPage' }}"
 	itemscope=""
 >

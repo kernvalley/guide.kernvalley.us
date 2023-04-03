@@ -14,6 +14,8 @@ import { DAYS } from 'https://cdn.kernvalley.us/js/std-js/date-consts.js';
 import { prefersReducedMotion } from 'https://cdn.kernvalley.us/js/std-js/media-queries.js';
 import { ready, loaded, query, on, toggleClass, each, map, addClass, intersect } from 'https://cdn.kernvalley.us/js/std-js/dom.js';
 import { init } from 'https://cdn.kernvalley.us/js/std-js/data-handlers.js';
+import { createPolicy } from 'https://cdn.kernvalley.us/js/std-js/trust.js';
+import { getGooglePolicy } from 'https://cdn.kernvalley.us/js/std-js/trust-policies.js';
 import { importGa, externalHandler, telHandler, mailtoHandler } from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
 import { GA } from './consts.js';
 import { installPrompt } from './functions.js';
@@ -26,9 +28,10 @@ toggleClass([document.documentElement], {
 });
 
 if (typeof GA === 'string' && GA.length !== 0) {
+	const policy = getGooglePolicy();
 	loaded().then(() => {
 		requestIdleCallback(async () => {
-			const { ga, hasGa } = await importGa(GA);
+			const { ga, hasGa } = await importGa(GA, {}, { policy });
 
 			if (hasGa()) {
 				ga('create', GA, 'auto');
@@ -41,6 +44,10 @@ if (typeof GA === 'string' && GA.length !== 0) {
 			}
 		});
 	});
+} else {
+	createPolicy('goog#html', {});
+	createPolicy('goog#script-url', {});
+	getGooglePolicy();
 }
 
 if ('serviceWorker' in navigator) {
@@ -55,6 +62,7 @@ if ('serviceWorker' in navigator) {
 		}
 	});
 }
+
 if (location.pathname !== '/' && location.hash.length > 1) {
 	loaded().then(() => {
 		const target = document.getElementById(location.hash.substr(1));
@@ -195,5 +203,4 @@ ready().then(() => {
 			datalist.append(...opts);
 		}
 	}
-
 });

@@ -1,4 +1,4 @@
-<section id="page-list" class="flex row wrap space-evenly">
+<section id="page-list" class="grid">
 	{% for dir in site.pages %}{% if dir.index and dir.url != page.url %}
 	  <a href="{{ dir.url }}" class="card shadow inline-block center category-link" data-tags="{{ dir.tags | join: ', ' | escape }}">
 		{% if dir.icon %}
