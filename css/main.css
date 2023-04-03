@@ -20,7 +20,10 @@
 }
 
 #page-list {
+	padding: 0.6rem;
 	gap: 8px;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 400px));
+	justify-items: center;
 }
 
 #page-list a {

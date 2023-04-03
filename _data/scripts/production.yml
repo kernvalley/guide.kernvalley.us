@@ -13,6 +13,10 @@
   crossOrigin: anonymous
   referrerPolicy: no-referrer
   defer: true
+- src: https://cdn.kernvalley.us/js/std-js/harden.js
+  crossOrigin: anonymous
+  referrerPolicy: no-referrer
+  defer: true
 - src: /js/index.min.js
   referrerPolicy: no-referrer
   defer: true
