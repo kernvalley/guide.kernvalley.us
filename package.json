@@ -68,6 +68,6 @@
   },
   "dependencies": {
     "eslint-plugin-frontmatter": "0.0.8",
-    "netlify-js-app": "^2.1.1"
+    "netlify-js-app": "^2.1.2"
   }
 }
