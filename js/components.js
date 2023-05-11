@@ -1,4 +1,3 @@
-import 'theme-cookie';
 import 'share-button';
 import 'krv-events';
 import 'share-to-button';

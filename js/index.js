@@ -1,3 +1,4 @@
+import 'theme-cookie';
 import './components.js';
 import { DAYS } from 'date-consts';
 import { prefersReducedMotion } from 'media-queries';
