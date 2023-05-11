@@ -1,7 +1,5 @@
-import { getCustomElement } from 'https://cdn.kernvalley.us/js/std-js/custom-elements.js';
-
 export async function installPrompt() {
-	const HTMLInstallPromptElement = await getCustomElement('install-prompt');
+	const HTMLInstallPromptElement = await customElements.whenDefined('install-prompt');
 	return await new HTMLInstallPromptElement().show();
 }
 

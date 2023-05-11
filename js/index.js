@@ -1,22 +1,11 @@
-import 'https://cdn.kernvalley.us/js/std-js/theme-cookie.js';
-import 'https://cdn.kernvalley.us/components/share-button.js';
-import 'https://cdn.kernvalley.us/components/krv/events.js';
-import 'https://cdn.kernvalley.us/components/share-to-button/share-to-button.js';
-import 'https://cdn.kernvalley.us/components/github/user.js';
-import 'https://cdn.kernvalley.us/components/current-year.js';
-import 'https://cdn.kernvalley.us/components/install/prompt.js';
-import 'https://cdn.kernvalley.us/components/krv/ad.js';
-import 'https://cdn.kernvalley.us/components/app/list-button.js';
-import 'https://cdn.kernvalley.us/components/app/stores.js';
-import 'https://cdn.kernvalley.us/components/business-hours.js';
-import 'https://cdn.kernvalley.us/components/window-controls.js';
-import { DAYS } from 'https://cdn.kernvalley.us/js/std-js/date-consts.js';
-import { prefersReducedMotion } from 'https://cdn.kernvalley.us/js/std-js/media-queries.js';
-import { ready, loaded, query, on, toggleClass, each, map, addClass, intersect } from 'https://cdn.kernvalley.us/js/std-js/dom.js';
-import { init } from 'https://cdn.kernvalley.us/js/std-js/data-handlers.js';
-import { createPolicy } from 'https://cdn.kernvalley.us/js/std-js/trust.js';
-import { getGooglePolicy } from 'https://cdn.kernvalley.us/js/std-js/trust-policies.js';
-import { importGa, externalHandler, telHandler, mailtoHandler } from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
+import './components.js';
+import { DAYS } from 'date-consts';
+import { prefersReducedMotion } from 'media-queries';
+import { ready, loaded, query, on, toggleClass, each, map, addClass, intersect } from 'dom';
+import { init } from 'data-handlers';
+import { createPolicy } from 'trust';
+import { getGooglePolicy } from 'trust-policies';
+import { importGa, externalHandler, telHandler, mailtoHandler } from 'google-analytics';
 import { GA } from './consts.js';
 import { installPrompt } from './functions.js';
 
@@ -29,7 +18,7 @@ toggleClass([document.documentElement], {
 
 if (typeof GA === 'string' && GA.length !== 0) {
 	const policy = getGooglePolicy();
-	loaded().then(() => {
+	scheduler.postTask(() => {
 		requestIdleCallback(async () => {
 			const { ga, hasGa } = await importGa(GA, {}, { policy });
 
@@ -43,7 +32,7 @@ if (typeof GA === 'string' && GA.length !== 0) {
 				on('a[href^="mailto:"]', 'click', mailtoHandler, { passive: true, capture: true });
 			}
 		});
-	});
+	}, { priority: 'background' });
 } else {
 	createPolicy('goog#html', {});
 	createPolicy('goog#script-url', {});
