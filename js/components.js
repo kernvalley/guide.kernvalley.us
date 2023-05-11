@@ -4,7 +4,7 @@ import 'share-to-button';
 import 'github-user';
 import 'current-year';
 import 'install-prompt';
-import 'krv/ad';
+import 'krv-ad';
 import 'list-button';
 import 'app-stores';
 import 'business-hours';
