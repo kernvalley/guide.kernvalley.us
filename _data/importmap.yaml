@@ -1,0 +1,22 @@
+---
+nonce: 300d91bb-3bea-47c7-afc9-a0a8c42ba639
+imports:
+  date-consts: https://cdn.kernvalley.us/js/std-js/date-consts.js
+  media-queries: https://cdn.kernvalley.us/js/std-js/media-queries.js
+  dom: https://cdn.kernvalley.us/js/std-js/dom.js
+  data-handlers: https://cdn.kernvalley.us/js/std-js/data-handlers.js
+  trust: https://cdn.kernvalley.us/js/std-js/trust.js
+  trust-policies: https://cdn.kernvalley.us/js/std-js/trust-policies.js
+  google-analytics: https://cdn.kernvalley.us/js/std-js/google-analytics.js
+  theme-cookie: https://cdn.kernvalley.us/js/std-js/theme-cookie.js
+  share-button: https://cdn.kernvalley.us/components/share-button.js
+  krv-events: https://cdn.kernvalley.us/components/krv/events.js
+  share-to-button: https://cdn.kernvalley.us/components/share-to-button/share-to-button.js
+  github-user: https://cdn.kernvalley.us/components/github/user.js
+  current-year: https://cdn.kernvalley.us/components/current-year.js
+  install-prompt: https://cdn.kernvalley.us/components/install/prompt.js
+  krv-ad: https://cdn.kernvalley.us/components/krv/ad.js
+  list-button: https://cdn.kernvalley.us/components/app/list-button.js
+  app-stores: https://cdn.kernvalley.us/components/app/stores.js
+  business-hours: https://cdn.kernvalley.us/components/business-hours.js
+  window-controls: https://cdn.kernvalley.us/components/window-controls.js

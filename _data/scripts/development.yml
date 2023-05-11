@@ -1,10 +1,12 @@
-- src: https://cdn.kernvalley.us/js/shims.min.js
+- src: https://unpkg.com/@shgysk8zer0/polyfills/all.min.js
   crossOrigin: anonymous
   referrerPolicy: no-referrer
+  integrity: sha384-xoY6kDRPTvbDfGdGA3S6Ercudev5mWGBWZIErLB38f7TeN6hV7zof6WBpzMdx/z0
   defer: true
-- src: https://cdn.kernvalley.us/js/std-js/harden.js
+- src: https://unpkg.com/@shgysk8zer0/kazoo@0.0.5/harden.js
   crossOrigin: anonymous
   referrerPolicy: no-referrer
+  integrity: sha384-55L/wO9o0uIVTeubRIDQB4bewfNqyxrj4OXuxlW24NMEk+ioZwMHVw/tFV78mM+k
   defer: true
 - src: /js/index.js
   type: module
