@@ -9,5 +9,6 @@ imports:
   '@shgysk8zer0/components/': https://cdn.kernvalley.us/components/
   '@kernvalley/components/': https://cdn.kernvalley.us/components/krv/
   'leaflet': https://unpkg.com/leaflet@1.9.3/dist/leaflet-src.esm.js
-  'firebase': https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js
+  'firebase/': https://www.gstatic.com/firebasejs/9.16.0/
   'url-pattern': https://unpkg.com/urlpattern-polyfill@1.0.0-rc1/dist/index.modern.js
+  'custom-elements': https://unpkg.com/@webcomponents/custom-elements@1.4.2/custom-elements.min.js
