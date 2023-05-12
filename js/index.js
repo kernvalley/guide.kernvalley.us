@@ -1,12 +1,12 @@
-import 'theme-cookie';
+import 'std-js/theme-cookie.js';
 import './components.js';
-import { DAYS } from 'date-consts';
-import { prefersReducedMotion } from 'media-queries';
-import { ready, loaded, query, on, toggleClass, each, map, addClass, intersect } from 'dom';
-import { init } from 'data-handlers';
-import { createPolicy } from 'trust';
-import { getGooglePolicy } from 'trust-policies';
-import { importGa, externalHandler, telHandler, mailtoHandler } from 'google-analytics';
+import { DAYS } from 'std-js/date-consts.js';
+import { prefersReducedMotion } from 'std-js/media-queries.js';
+import { ready, loaded, query, on, toggleClass, each, map, addClass, intersect } from 'std-js/dom.js';
+import { init } from 'std-js/data-handlers.js';
+import { createPolicy } from 'std-js/trust.js';
+import { getGooglePolicy } from 'std-js/trust-policies.js';
+import { importGa, externalHandler, telHandler, mailtoHandler } from 'std-js/google-analytics.js';
 import { GA } from './consts.js';
 import { installPrompt } from './functions.js';
 
