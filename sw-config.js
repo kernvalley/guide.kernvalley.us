@@ -31,7 +31,7 @@ const config = {
 	].map(path => new URL(path, location.origin).href),
 	stale: [
 		/* JS */
-		'https://unpkg.com/@shgysk8zer0/polyfills/all.min.js',
+		'https://unpkg.com/@shgysk8zer0/polyfills@0.0.5/all.min.js',
 		'https://unpkg.com/@shgysk8zer0/kazoo@0.0.5/harden.js',
 		'/js/index.min.js',
 
@@ -93,3 +93,4 @@ const config = {
 		]),
 	},
 };
+
