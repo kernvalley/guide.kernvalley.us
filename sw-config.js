@@ -31,27 +31,25 @@ const config = {
 	].map(path => new URL(path, location.origin).href),
 	stale: [
 		/* JS */
-		'https://unpkg.com/@shgysk8zer0/polyfills@0.0.5/all.min.js',
-		'https://unpkg.com/@shgysk8zer0/kazoo@0.0.5/harden.js',
 		'/js/index.min.js',
+		'{{ site.data.importmap.imports["@shgysk8zer0/polyfills"] }}',
+		'{{ site.data.importmap.imports["@shgysk8zer0/kazoo/"] }}harden.js',
 
 		/* CSS */
 		'/css/index.min.css',
-		'https://cdn.kernvalley.us/components/toast-message.css',
-		'https://cdn.kernvalley.us/components/share-to-button/share-to-button.css',
-		'https://cdn.kernvalley.us/components/github/user.css',
-		'https://cdn.kernvalley.us/components/install/prompt.css',
-		'https://cdn.kernvalley.us/components/krv/events.css',
-		'https://cdn.kernvalley.us/components/krv/ad.css',
-		'https://cdn.kernvalley.us/components/notification/html-notification.css',
+		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}button/share-to.css',
+		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}github/user.css',
+		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}install/prompt.css',
+		'{{ site.data.importmap.imports["@kernvalley/components/"] }}ad.css',
+		'{{ site.data.importmap.imports["@kernvalley/components/"] }}events.css',
+		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}notification/html-notification.css',
 
 		/* `customElements` templates */
-		'https://cdn.kernvalley.us/components/toast-message.html',
-		'https://cdn.kernvalley.us/components/share-to-button/share-to-button.html',
-		'https://cdn.kernvalley.us/components/github/user.html',
-		'https://cdn.kernvalley.us/components/install/prompt.html',
-		'https://cdn.kernvalley.us/components/krv/events.html',
-		'https://cdn.kernvalley.us/components/notification/html-notification.html',
+		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}button/share-to.html',
+		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}github/user.html',
+		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}install/prompt.html',
+		'{{ site.data.importmap.imports["@kernvalley/components/"] }}events.html',
+		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}notification/html-notification.html',
 
 		/* Images & Icons */
 		'/img/icons.svg',
