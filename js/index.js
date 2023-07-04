@@ -1,12 +1,12 @@
-import 'std-js/theme-cookie.js';
+import '@shgysk8zer0/kazoo/theme-cookie.js';
 import './components.js';
-import { DAYS } from 'std-js/date-consts.js';
-import { prefersReducedMotion } from 'std-js/media-queries.js';
-import { ready, loaded, query, on, toggleClass, each, map, addClass, intersect } from 'std-js/dom.js';
-import { init } from 'std-js/data-handlers.js';
-import { createPolicy } from 'std-js/trust.js';
-import { getGooglePolicy } from 'std-js/trust-policies.js';
-import { importGa, externalHandler, telHandler, mailtoHandler } from 'std-js/google-analytics.js';
+import { DAYS } from '@shgysk8zer0/kazoo/date-consts.js';
+import { prefersReducedMotion } from '@shgysk8zer0/kazoo/media-queries.js';
+import { ready, loaded, query, on, toggleClass, each, map, addClass, intersect } from '@shgysk8zer0/kazoo/dom.js';
+import { init } from '@shgysk8zer0/kazoo/data-handlers.js';
+import { createPolicy } from '@shgysk8zer0/kazoo/trust.js';
+import { getGooglePolicy } from '@shgysk8zer0/kazoo/trust-policies.js';
+import { importGa, externalHandler, telHandler, mailtoHandler } from '@shgysk8zer0/kazoo/google-analytics.js';
 import { GA } from './consts.js';
 import { installPrompt } from './functions.js';
 

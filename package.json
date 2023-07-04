@@ -1,11 +1,11 @@
 {
   "name": "krv-guide",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "private": true,
   "type": "module",
   "description": "Your virtual guide to exploring the Kern River Valley. Get the knowledge of locals at your fingertips!",
   "config": {
-    "icons": "./_data/icons.csv",
+    "icons": "./_data/icons.yml",
     "serve": {
       "domain": "localhost",
       "path": "./",
@@ -54,7 +54,7 @@
     "build:site:dev": "bundle exec jekyll build --drafts --unpublished --future --profile --trace --strict_front_matter",
     "build:css": "if [ -f 'postcss.config.js' ]; then postcss ${npm_package_config_dir_css}index.css -o ${npm_package_config_dir_css}index.min.css; fi",
     "build:js": "if [ -f 'rollup.config.js' ]; then rollup --config; fi",
-    "build:icons": "if [ -f ${npm_package_config_icons} ]; then $(svg-sprite-generate -c ${npm_package_config_icons} -o 'img/icons.svg'); fi",
+    "build:icons": "if [ -f ${npm_package_config_icons} ]; then svg-use-symbols -c ${npm_package_config_icons} -o 'img/icons.svg'; fi",
     "serve:production": "npm run build && JEKYLL_ENV=production bundle exec jekyll serve",
     "serve:dev": "bundle exec jekyll serve --drafts --unpublished --future --profile --trace --strict_front_matter",
     "netlify": "if [ -f '.netlify/state.json' ]; then npm run netlify:live; else npm run netlify:serve; fi",
@@ -69,6 +69,6 @@
   },
   "dependencies": {
     "eslint-plugin-frontmatter": "0.0.8",
-    "netlify-js-app": "^3.0.4"
+    "netlify-js-app": "^3.3.0"
   }
 }

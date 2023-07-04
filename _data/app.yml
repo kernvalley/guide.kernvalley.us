@@ -2,7 +2,7 @@ name: Kern Valley Guide
 shortName: KRV Guide
 id: KRVGuide
 startUrl: /?utm_source=pwa&utm_medium=pwa&utm_campaign=pwa
-version: 2.0.0
+version: 2.0.1
 lang: en
 dir: ltr
 display: standalone

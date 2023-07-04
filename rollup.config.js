@@ -1,16 +1,13 @@
 /* eslint-env node */
-import terser from '@rollup/plugin-terser';
-import { rollupImport } from '@shgysk8zer0/rollup-import';
+import { getConfig } from '@shgysk8zer0/js-utils/rollup';
+import { rollupImport, rollupImportMeta } from '@shgysk8zer0/rollup-import';
 
-export default {
-	input: 'js/index.js',
-	output: {
-		file: 'js/index.min.js',
-		format: 'iife',
-		sourcemap: true,
-	},
+export default getConfig('./js/index.js', {
 	plugins: [
-		rollupImport(['_data/importmap.yaml']),
-		terser(),
+		rollupImport('_data/importmap.yml'),
+		rollupImportMeta({ baseURL: 'https://guide.kernvalley.us/' }),
 	],
-};
+	format: 'iife',
+	minify: true,
+	sourcemap: true,
+});
