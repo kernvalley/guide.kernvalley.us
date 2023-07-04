@@ -13,7 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v2.0.1] - 2023-07-04
+
 ### Changed
+- Update packages and config
 - Update module import mapping
 
 ## [v2.0.0] - 2023-05-11
