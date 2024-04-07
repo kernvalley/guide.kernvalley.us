@@ -1,5 +1,7 @@
 window-controls {
 	background-color: var(--accent-color);
+	height: 0;
+	height: env(titelbar-area-height, 0);
 	z-index: 5;
 }
 
@@ -10,7 +12,7 @@ window-controls::part(container) {
 
 window-controls form {
 	display: inline-flex;
-	height: env(titelbar-area-height, 33px);
+	height: env(titelbar-area-height, 0);
 	width: 100%;
 	padding-left: 8px;
 	contain: strict;

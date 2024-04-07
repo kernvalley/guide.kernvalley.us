@@ -13,6 +13,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v2.0.2] - 2024-04-06
+
+### Changed
+- Update to use `@aegisjsproject/parsers`
+- Remove unused Trusted Types Policies
+- Switch to using `@shgysk8zer0/core-css` for most styles
+
 ## [v2.0.1] - 2023-07-04
 
 ### Changed

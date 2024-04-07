@@ -33,23 +33,11 @@ const config = {
 		/* JS */
 		'/js/index.min.js',
 		'{{ site.data.importmap.imports["@shgysk8zer0/polyfills"] }}',
-		'{{ site.data.importmap.imports["@shgysk8zer0/kazoo/"] }}harden.js',
 
 		/* CSS */
 		'/css/index.min.css',
-		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}button/share-to.css',
-		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}github/user.css',
-		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}install/prompt.css',
-		'{{ site.data.importmap.imports["@kernvalley/components/"] }}ad.css',
-		'{{ site.data.importmap.imports["@kernvalley/components/"] }}events.css',
-		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}notification/html-notification.css',
 
 		/* `customElements` templates */
-		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}button/share-to.html',
-		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}github/user.html',
-		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}install/prompt.html',
-		'{{ site.data.importmap.imports["@kernvalley/components/"] }}events.html',
-		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}notification/html-notification.html',
 
 		/* Images & Icons */
 		'/img/icons.svg',
@@ -77,17 +65,16 @@ const config = {
 		'https://www.google-analytics.com/analytics.js',
 		'https://www.googletagmanager.com/gtag/js',
 		'https://api.github.com/users/',
+		/^https:\/\/unpkg\.com\//,
 		/\.(html|css|js|json)$/,
 	],
 	periodicSync: {
 		'main-assets': async () => await updateAssets([
+			'/',
 			'/js/index.min.js',
 			'/css/index.min.css',
 			'/img/icons.svg',
 			'/webapp.webmanifest',
-		]),
-		'pinned-pages': async () => await updateAssets([
-			'{{ site.pages | where: "pinned", true | map: "url" | join: "', '" }}'
 		]),
 	},
 };

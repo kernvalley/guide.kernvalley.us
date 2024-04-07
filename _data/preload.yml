@@ -1,50 +1,50 @@
-- href: https://cdn.kernvalley.us/components/krv/events.html
-  as: fetch
-  type: text/html
-  importance: high
-  crossOrigin: anonymous
-  referrerPolicy: no-referrer
-- href: https://cdn.kernvalley.us/components/krv/events.css
-  as: style
-  type: text/css
-  importance: high
-  crossOrigin: anonymous
-  referrerPolicy: no-referrer
-- href: https://cdn.kernvalley.us/components/github/user.html
-  as: fetch
-  type: text/html
-  crossOrigin: anonymous
-  referrerPolicy: no-referrer
-- href: https://cdn.kernvalley.us/components/github/user.css
-  as: style
-  type: text/css
-  crossOrigin: anonymous
-  referrerPolicy: no-referrer
-- href: https://cdn.kernvalley.us/components/install/prompt.html
-  as: fetch
-  type: text/html
-  crossOrigin: anonymous
-  referrerPolicy: no-referrer
-  importance: low
-- href: https://cdn.kernvalley.us/components/install/prompt.css
-  as: style
-  type: text/css
-  crossOrigin: anonymous
-  referrerPolicy: no-referrer
-  importance: low
-- href: /img/neon.svg
-  as: image
-  type: image/svg+xml
-  referrerPolicy: no-referrer
-  importance: high
+# - href: https://cdn.kernvalley.us/components/krv/events.html
+#   as: fetch
+#   type: text/html
+#   importance: high
+#   crossOrigin: anonymous
+#   referrerPolicy: no-referrer
+# - href: https://cdn.kernvalley.us/components/krv/events.css
+#   as: style
+#   type: text/css
+#   importance: high
+#   crossOrigin: anonymous
+#   referrerPolicy: no-referrer
+# - href: https://cdn.kernvalley.us/components/github/user.html
+#   as: fetch
+#   type: text/html
+#   crossOrigin: anonymous
+#   referrerPolicy: no-referrer
+# - href: https://cdn.kernvalley.us/components/github/user.css
+#   as: style
+#   type: text/css
+#   crossOrigin: anonymous
+#   referrerPolicy: no-referrer
+# - href: https://cdn.kernvalley.us/components/install/prompt.html
+#   as: fetch
+#   type: text/html
+#   crossOrigin: anonymous
+#   referrerPolicy: no-referrer
+#   importance: low
+# - href: https://cdn.kernvalley.us/components/install/prompt.css
+#   as: style
+#   type: text/css
+#   crossOrigin: anonymous
+#   referrerPolicy: no-referrer
+#   importance: low
+# - href: /img/neon.svg
+#   as: image
+#   type: image/svg+xml
+#   referrerPolicy: no-referrer
+#   importance: high
 - href: https://cdn.kernvalley.us/fonts/roboto.woff2
   as: font
   type: font/woff2
   crossOrigin: anonymous
   referrerPolicy: no-referrer
   importance: high
-- href: https://cdn.kernvalley.us/components/window-controls.css
-  as: style
-  type: text/css
-  crossOrigin: anonymous
-  referrerPolicy: no-referrer
+# - href: https://cdn.kernvalley.us/components/window-controls.css
+#   as: style
+#   type: text/css
+#   crossOrigin: anonymous
+#   referrerPolicy: no-referrer

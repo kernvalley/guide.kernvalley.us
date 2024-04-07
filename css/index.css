@@ -1,16 +1,18 @@
 @charset "UTF-8";
 @import url("./vars.css");
-@import url("https://cdn.kernvalley.us/css/normalize/normalize.css");
-@import url("https://cdn.kernvalley.us/css/core-css/viewport.css");
-@import url("https://cdn.kernvalley.us/css/core-css/element.css");
-@import url("https://cdn.kernvalley.us/css/core-css/class-rules.css");
-@import url("https://cdn.kernvalley.us/css/core-css/cdn-fonts.css");
-@import url("https://cdn.kernvalley.us/css/core-css/animations.css");
-@import url("https://cdn.kernvalley.us/css/core-css/scrollbar.css");
-@import url("https://cdn.kernvalley.us/css/core-css/accordion.css");
-@import url("https://cdn.kernvalley.us/css/core-css/forms.css");
+@import url("https://unpkg.com/normalize.css@8.0.1/normalize.css");
+@import url("https://unpkg.com/@shgysk8zer0/core-css@2.5.4/viewport.css");
+@import url("https://unpkg.com/@shgysk8zer0/core-css@2.5.4/element.css");
+@import url("https://unpkg.com/@shgysk8zer0/core-css@2.5.4/class-rules.css");
+@import url("https://unpkg.com/@shgysk8zer0/core-css@2.5.4/cdn-fonts.css");
+@import url("https://unpkg.com/@shgysk8zer0/core-css@2.5.4/animations.css");
+@import url("https://unpkg.com/@shgysk8zer0/core-css@2.5.4/scrollbar.css");
+@import url("https://unpkg.com/@shgysk8zer0/core-css@2.5.4/accordion.css");
+@import url("https://unpkg.com/@shgysk8zer0/core-css@2.5.4/forms.css");
 @import url("./layout.css");
 @import url("./window.css");
+
+/* @import url("https://unpkg.com/@shgysk8zer0/normalize/normalize.css"); */
 
 :root {
 	font-size: 18px;
