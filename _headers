@@ -4,7 +4,7 @@
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: no-referrer
   Permissions-Policy: geolocation=();
-  Link: <https://unpkg.com/@shgysk8zer0/polyfills@0.3.9/all.min.js>; rel=preload; as=script; crossorigin=anonymous; referrerpolicy=no-referrer;
+  Link: <https://unpkg.com/@shgysk8zer0/polyfills@0.3.10/all.min.js>; rel=preload; as=script; crossorigin=anonymous; referrerpolicy=no-referrer;
   Link: </js/index.min.js>; rel=preload; as=script; referrerpolicy=no-referrer;
   Link: </css/index.min.css>; rel=preload; as=style; referrerpolicy=no-referrer;
   Link: </img/icons.svg>; rel=preload; as=image; referrerpolicy=no-referrer;
@@ -16,7 +16,7 @@
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: no-referrer
   Permissions-Policy: geolocation=(self https://maps.kernvalley.us/embed);
- Link: <https://unpkg.com/@shgysk8zer0/polyfills@0.3.9/all.min.js>; rel=preload; as=script; crossorigin=anonymous; referrerpolicy=no-referrer;
+ Link: <https://unpkg.com/@shgysk8zer0/polyfills@0.3.10/all.min.js>; rel=preload; as=script; crossorigin=anonymous; referrerpolicy=no-referrer;
   Link: </js/index.min.js>; rel=preload; as=script; referrerpolicy=no-referrer;
   Link: </css/index.min.css>; rel=preload; as=style; referrerpolicy=no-referrer;
   Link: </img/icons.svg>; rel=preload; as=image; referrerpolicy=no-referrer;
@@ -45,4 +45,3 @@
 
 /*
   X-Content-Type-Options: nosniff
-
