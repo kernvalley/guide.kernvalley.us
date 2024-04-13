@@ -19,20 +19,19 @@ toggleClass([document.documentElement], {
 
 if (typeof GA === 'string' && GA.length !== 0) {
 	const policy = getGooglePolicy();
-	scheduler.postTask(() => {
-		requestIdleCallback(async () => {
-			const { ga, hasGa } = await importGa(GA, {}, { policy });
 
-			if (hasGa()) {
-				ga('create', GA, 'auto');
-				ga('set', 'transport', 'beacon');
-				ga('send', 'pageview');
+	scheduler.postTask(async () => {
+		const { ga, hasGa } = await importGa(GA, {}, { policy });
 
-				on('a[rel~="external"]', 'click', externalHandler, { passive: true, capture: true });
-				on('a[href^="tel:"]', 'click', telHandler, { passive: true, capture: true });
-				on('a[href^="mailto:"]', 'click', mailtoHandler, { passive: true, capture: true });
-			}
-		});
+		if (hasGa()) {
+			ga('create', GA, 'auto');
+			ga('set', 'transport', 'beacon');
+			ga('send', 'pageview');
+
+			on('a[rel~="external"]', 'click', externalHandler, { passive: true, capture: true });
+			on('a[href^="tel:"]', 'click', telHandler, { passive: true, capture: true });
+			on('a[href^="mailto:"]', 'click', mailtoHandler, { passive: true, capture: true });
+		}
 	}, { priority: 'background' });
 } else {
 	createPolicy('goog#html', {});
