@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Update importmap with new versions of components
+- Update linting
 
 ## [v2.0.3] - 2024-04-12
 
