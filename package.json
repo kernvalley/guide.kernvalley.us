@@ -1,6 +1,6 @@
 {
   "name": "krv-guide",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "private": true,
   "type": "module",
   "description": "Your virtual guide to exploring the Kern River Valley. Get the knowledge of locals at your fingertips!",
@@ -68,7 +68,7 @@
     "version:bump:major": "npm version --no-git-tag-version major"
   },
   "dependencies": {
-    "netlify-js-app": "^3.3.2"
+    "netlify-js-app": "^3.3.3"
   },
   "devDependencies": {
     "eslint-plugin-frontmatter2": "^1.0.0"
