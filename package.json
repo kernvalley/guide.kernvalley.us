@@ -71,6 +71,6 @@
     "netlify-js-app": "^3.3.4"
   },
   "devDependencies": {
-    "eslint-plugin-frontmatter2": "^1.0.0"
+    "eslint-plugin-frontmatter2": "^1.0.1"
   }
 }
