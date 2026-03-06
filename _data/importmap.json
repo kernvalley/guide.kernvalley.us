@@ -2,8 +2,8 @@
   "nonce": "300d91bb-3bea-47c7-afc9-a0a8c42ba639",
   "imports": {
     "@node/": "/node_modules/",
-    "@shgysk8zer0/kazoo/": "https://unpkg.com/@shgysk8zer0/kazoo@1.0.10/",
-    "@shgysk8zer0/konami": "https://unpkg.com/@shgysk8zer0/konami@1.1.1/konami.js",
+    "@shgysk8zer0/kazoo/": "https://unpkg.com/@shgysk8zer0/kazoo@1.0.11/",
+    "@shgysk8zer0/konami": "https://unpkg.com/@shgysk8zer0/konami@1.1.2/konami.js",
     "@shgysk8zer0/polyfills": "https://unpkg.com/@shgysk8zer0/polyfills@0.6.2/browser.min.js",
     "@shgysk8zer0/polyfills/": "https://unpkg.com/@shgysk8zer0/polyfills@0.6.2/",
     "@shgysk8zer0/jwk-utils": "https://unpkg.com/@shgysk8zer0/jwk-utils@1.0.20/jwk-utils.min.js",
@@ -13,7 +13,7 @@
     "@shgysk8zer0/jss/": "https://unpkg.com/@shgysk8zer0/jss@1.0.1/",
     "@shgysk8zer0/consts/": "https://unpkg.com/@shgysk8zer0/consts@1.0.8/",
     "@shgysk8zer0/http/": "https://unpkg.com/@shgysk8zer0/http@1.0.5/",
-    "@shgysk8zer0/http-status": "https://unpkg.com/@shgysk8zer0/http-status@1.1.2/http-status.js",
+    "@shgysk8zer0/http-status": "https://unpkg.com/@shgysk8zer0/http-status@1.1.4/http-status.js",
     "@shgysk8zer0/aes-gcm": "https://unpkg.com/@shgysk8zer0/aes-gcm@1.0.8/aes-gcm.min.js",
     "@shgysk8zer0/aes-gcm/": "https://unpkg.com/@shgysk8zer0/aes-gcm@1.0.8/",
     "@shgysk8zer0/squish": "https://unpkg.com/@shgysk8zer0/squish@1.0.2/squish.min.js",
@@ -56,10 +56,10 @@
     "@aegisjsproject/state/": "https://unpkg.com/@aegisjsproject/state@1.0.7/",
     "@aegisjsproject/router": "https://unpkg.com/@aegisjsproject/router@1.1.15/router.mjs",
     "@aegisjsproject/router/": "https://unpkg.com/@aegisjsproject/router@1.1.15/",
-    "@aegisjsproject/callback-registry": "https://unpkg.com/@aegisjsproject/callback-registry@1.0.3/callbackRegistry.js",
-    "@aegisjsproject/callback-registry/": "https://unpkg.com/@aegisjsproject/callback-registry@1.0.3/",
-    "@aegisjsproject/attempt": "https://unpkg.com/@aegisjsproject/attempt@1.0.5/attempt.js",
-    "@aegisjsproject/attempt/": "https://unpkg.com/@aegisjsproject/attempt@1.0.5/",
+    "@aegisjsproject/callback-registry": "https://unpkg.com/@aegisjsproject/callback-registry@2.0.0/callbackRegistry.js",
+    "@aegisjsproject/callback-registry/": "https://unpkg.com/@aegisjsproject/callback-registry@2.0.0/",
+    "@aegisjsproject/attempt": "https://unpkg.com/@aegisjsproject/attempt@1.0.7/attempt.js",
+    "@aegisjsproject/attempt/": "https://unpkg.com/@aegisjsproject/attempt@1.0.7/",
     "@aegisjsproject/secret-store": "https://unpkg.com/@aegisjsproject/secret-store@1.0.1/commands.min.js",
     "@aegisjsproject/commands/": "https://unpkg.com/@aegisjsproject/commands@1.0.1/",
     "@aegisjsproject/commands": "https://unpkg.com/@aegisjsproject/commands@1.0.1/commands.min.js",
@@ -109,7 +109,8 @@
     "lit-element/": "https://unpkg.com/lit-element@4.2.2/",
     "@lit/reactive-element": "https://unpkg.com/@lit/reactive-element@2.1.2/reactive-element.js",
     "@lit/reactive-element/": "https://unpkg.com/@lit/reactive-element@2.1.2/",
-    "@awesome.me/webawesome/": "https://unpkg.com/@awesome.me/webawesome@3.2.1/"
+    "@awesome.me/webawesome/": "https://unpkg.com/@awesome.me/webawesome@3.2.1/",
+    "normalize.css": "https://unpkg.com/normalize.css@8.0.1/normalize.css"
   },
   "scopes": {}
 }
