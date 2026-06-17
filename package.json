@@ -68,11 +68,11 @@
     "version:bump:major": "npm version --no-git-tag-version major"
   },
   "dependencies": {
-    "netlify-js-app": "^3.3.13"
+    "netlify-js-app": "^3.4.0"
   },
   "devDependencies": {
     "@shgysk8zer0/eslint-config": "^1.0.9",
-    "@shgysk8zer0/polyfills": "^0.6.3",
+    "@shgysk8zer0/polyfills": "^0.8.6",
     "eslint-plugin-frontmatter2": "^1.0.1"
   }
 }
